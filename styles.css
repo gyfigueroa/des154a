@@ -14,11 +14,10 @@ h2 {
 
 }
 
-header {
+body {
 	background: radial-gradient(circle, #ee7752, #FFBF40, #6B5DD5, #1DF083);
 	background-size: 500% 500%;
 	animation: gradient 20s ease-in-out infinite;
-	height: 300px;
 }
 
 @keyframes gradient {
@@ -39,6 +38,27 @@ header {
 	}
 }
 
+header {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+header h1 {
+  font-weight: 800;
+  color: white;
+  margin: auto;
+  letter-spacing: -2px;
+  opacity: 80%;
+}
+
+header h2 {
+  color: white;
+  margin: auto;
+}
+
 #headshot {
   height: 200px;
   width: auto;
@@ -53,14 +73,11 @@ header {
 
 main {
   background-color: #F5F5F5;
-  margin: 20px;
-  
-}
-
-#menu {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 30px 30px 0px 0px;
 }
 
 nav {
@@ -84,4 +101,29 @@ nav ul li a {
   font-weight: 600;
   opacity: 80%;
 }
+
+footer {
+  background-color: #F5F5F5;
+  display: flex;
+  height: 100px;
+}
+
+footer a {
+  background: radial-gradient(circle, #ee7752, #FFBF40, #6B5DD5, #1DF083);
+	background-size: 500% 500%;
+	animation: gradient 20s ease-in-out infinite;
+  margin: auto;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 80%;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}
+
+
 
