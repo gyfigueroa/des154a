@@ -59,16 +59,90 @@ header h2 {
   margin: auto;
 }
 
+header p {
+  width: 45px;
+  height: 45px;
+  padding: 10px;
+  background-color: #1DF083;
+  border-radius: 50%;
+  font-size: 25px;
+  position: absolute;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+header div {
+  position: relative;
+  margin: auto;
+}
+
+#zombie {
+  background-color: #acd59b;
+  bottom: 0px;
+  left: 0px;
+  transform: scale(150%);
+}
+
+#tulip {
+  background-color: #ffc6b5;
+  top: 0px;
+  right: 0px;
+  transform: scale(110%);
+}
+
+#eggs {
+  background-color: #fc9f35;
+  top: -10px;
+  left: -20px;
+
+}
+
+#avocado {
+  background-color: #9bf360;
+  top: 30px;
+  left: -50px;
+  transform: scale(80%);
+}
+
+#film {
+  background-color: #ffe641;
+  bottom: 0px;
+  right: -40px;
+  transform: scale(60%);
+}
+
+#heart {
+  background-color: #68d2ff;
+  bottom: 90px;
+  right: -30px;
+  transform: scale(80%);
+}
+
+#books {
+  background-color: rgb(165, 138, 239);
+  bottom: 20px;
+  left: -35px;
+  transform: scale(80%);
+}
+
+#mexico {
+  background-color: rgb(255, 139, 113);
+  bottom: -20px;
+  right: 0px;
+  transform: scale(120%);
+}
+
+
+
 #headshot {
+  position: relative;
   height: 200px;
   width: auto;
   margin: auto;
-
   box-sizing: border-box;
   border:10px solid white;
   border-radius: 500px;
   box-shadow: 0px 10px 40px -7px rgba(0,0,0,0.6);
-
 }
 
 main {
@@ -105,14 +179,25 @@ nav ul li a {
 footer {
   background-color: #F5F5F5;
   display: flex;
-  height: 100px;
+  height: auto;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+footer h1 {
+  padding-top: 10px;
+  font-weight: 600;
+  opacity: 80%;
+  letter-spacing: -1px;
+  margin: auto;
 }
 
 footer a {
   background: radial-gradient(circle, #ee7752, #FFBF40, #6B5DD5, #1DF083);
 	background-size: 500% 500%;
 	animation: gradient 20s ease-in-out infinite;
-  margin: auto;
+  margin: 10px auto auto;
   text-decoration: none;
   font-size: 20px;
   font-weight: 600;
