@@ -1,6 +1,5 @@
 * {
   font-family: "Karla", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   color: black;
@@ -80,14 +79,14 @@ header div {
   background-color: #acd59b;
   bottom: 0px;
   left: 0px;
-  transform: scale(150%);
+  transform: scale(1.5);
 }
 
 #tulip {
   background-color: #ffc6b5;
   top: 0px;
   right: 0px;
-  transform: scale(110%);
+  transform: scale(1.1);
 }
 
 #eggs {
@@ -101,35 +100,35 @@ header div {
   background-color: #9bf360;
   top: 30px;
   left: -50px;
-  transform: scale(80%);
+  transform: scale(0.8);
 }
 
 #film {
   background-color: #ffe641;
   bottom: 0px;
   right: -40px;
-  transform: scale(60%);
+  transform: scale(0.6);
 }
 
 #heart {
   background-color: #68d2ff;
   bottom: 90px;
   right: -30px;
-  transform: scale(80%);
+  transform: scale(0.8);
 }
 
 #books {
   background-color: rgb(165, 138, 239);
   bottom: 20px;
   left: -35px;
-  transform: scale(80%);
+  transform: scale(0.8);
 }
 
 #mexico {
   background-color: rgb(255, 139, 113);
   bottom: -20px;
   right: 0px;
-  transform: scale(120%);
+  transform: scale(1.2);
 }
 
 #headshot {
@@ -240,7 +239,7 @@ footer a {
   }
 
   #eggs {
-    transform: scale(100%);
+    transform: scale(1);
     top: 50%;
     left: 50%;
     z-index: -1;
@@ -248,7 +247,7 @@ footer a {
   }
 
   #tulip {
-    transform: scale(100%);
+    transform: scale(1);
     top: 50%;
     left: 50%;
     z-index: -1;
@@ -256,7 +255,7 @@ footer a {
   }
 
   #avocado {
-    transform: scale(100%);
+    transform: scale(1);
     top: 50%;
     left: 50%;
     z-index: -1;
@@ -264,7 +263,7 @@ footer a {
   }
 
   #heart {
-    transform: scale(100%);
+    transform: scale(1);
     top: 50%;
     left: 50%;
     z-index: -1;
@@ -272,7 +271,7 @@ footer a {
   }
 
   #mexico {
-    transform: scale(1%);
+    transform: scale(0.01);
     top: 50%;
     left: 50%;
     z-index: 1;
@@ -280,7 +279,7 @@ footer a {
   }
 
   #film {
-    transform: scale(100%);
+    transform: scale(1);
     top: 50%;
     left: 50%;
     z-index: -1;
@@ -288,7 +287,7 @@ footer a {
   }
 
   #books {
-    transform: scale(100%);
+    transform: scale(1);
     top: 50%;
     left: 50%;
     z-index: -1;
@@ -296,7 +295,7 @@ footer a {
   }
 
   #zombie {
-    transform: scale(100%);
+    transform: scale(1);
     top: 50%;
     left: 50%;
     z-index: -1;
@@ -304,41 +303,41 @@ footer a {
   }
 
   #profile img:hover {
-    transform: scale(110%);
+    transform: scale(1.1);
     border:5px solid white;
     box-shadow: 0px 10px 60px -7px rgba(0,0,0,0.5);
   }
 
   #profile img:hover ~ #zombie {
-    transform: translate(118px,59px) scale(110%);
+    transform: translate(118px,59px) scale(1.1);
   }
 
   #profile img:hover ~ #eggs {
-    transform: translate(-133px,60px) scale(100%);
+    transform: translate(-133px,60px) scale(1);
   }
 
   #profile img:hover ~ #tulip {
-    transform: translate(105px,10px) scale(70%);
+    transform: translate(105px,10px) scale(0.7);
   }
 
   #profile img:hover ~ #avocado {
-    transform: translate(-171px,8px) scale(150%);
+    transform: translate(-171px,8px) scale(1.5);
   }
 
   #profile img:hover ~ #heart {
-    transform: translate(121px,-74px) scale(150%);
+    transform: translate(121px,-74px) scale(1.5);
   }
 
   #profile img:hover ~ #mexico {
-    transform: translate(40px,40px) scale(150%);
+    transform: translate(40px,40px) scale(1.5);
   }
 
   #profile img:hover ~ #film {
-    transform: translate(74px,-118px) scale(70%);
+    transform: translate(74px,-118px) scale(0.7);
   }
 
   #profile img:hover ~ #books {
-    transform: translate(-151px,-105px) scale(150%);
+    transform: translate(-151px,-105px) scale(1.5);
   }
 
   nav {
@@ -348,7 +347,7 @@ footer a {
 
   nav:hover {
     box-shadow: 0px 10px 60px -7px rgba(0,0,0,0.3);
-    transform: scale(105%);
+    transform: scale(1.05);
   }
 
   footer a {
@@ -357,7 +356,7 @@ footer a {
 
   footer a:hover {
     box-shadow: 0px 10px 60px -7px rgba(0,0,0,0.3);
-    transform: scale(120%);
+    transform: scale(1.2);
     border-radius: 15px;
   }
 
