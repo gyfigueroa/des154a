@@ -132,8 +132,6 @@ header div {
   transform: scale(120%);
 }
 
-
-
 #headshot {
   position: relative;
   height: 200px;
@@ -142,24 +140,31 @@ header div {
   box-sizing: border-box;
   border:10px solid white;
   border-radius: 500px;
-  box-shadow: 0px 10px 40px -7px rgba(0,0,0,0.6);
+  box-shadow: 0px 10px 30px -7px rgba(0,0,0,0.8);
 }
 
 main {
   background-color: #F5F5F5;
+  border-radius: 30px 30px 0px 0px;
+}
+
+#menu {
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 20px;
-  border-radius: 30px 30px 0px 0px;
 }
 
 nav {
   flex: 1;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0px 10px 40px -7px rgba(0,0,0,0.6);
-  padding: 10px 20px 10px 20px;
+  box-shadow: 0px 10px 30px -7px rgba(0,0,0,0.6);
+  padding: 0px 20px 20px 20px;
+}
+
+nav h2 {
+  padding-top: 10px;
 }
 
 nav ul {
@@ -169,11 +174,16 @@ nav ul {
   margin: 0px;
 }
 
+nav ul li {
+  padding-bottom: 10px;
+}
+
 nav ul li a {
   text-decoration: none;
   font-size: 20px;
   font-weight: 600;
   opacity: 80%;
+  line-height: 80%;
 }
 
 footer {
@@ -210,5 +220,163 @@ footer a {
   color: white;
 }
 
+@media screen and (min-width: 600px){
+  main {
+    border-radius: 0px;
+  }
 
+  #menu {
+    flex-direction: row;
+    max-width: 750px;
+    margin: auto;
+  }
+
+  header p {
+    margin: 0;
+  }
+
+  #profile img {
+    transition: 1s;
+  }
+
+  #eggs {
+    transform: scale(100%);
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transition: 1s;
+  }
+
+  #tulip {
+    transform: scale(100%);
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transition: 1s;
+  }
+
+  #avocado {
+    transform: scale(100%);
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transition: 1s;
+  }
+
+  #heart {
+    transform: scale(100%);
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transition: 1s;
+  }
+
+  #mexico {
+    transform: scale(1%);
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transition: 1s;
+  }
+
+  #film {
+    transform: scale(100%);
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transition: 1s;
+  }
+
+  #books {
+    transform: scale(100%);
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transition: 1s;
+  }
+
+  #zombie {
+    transform: scale(100%);
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transition: 1s;
+  }
+
+  #profile img:hover {
+    transform: scale(110%);
+    border:5px solid white;
+    box-shadow: 0px 10px 60px -7px rgba(0,0,0,0.5);
+  }
+
+  #profile img:hover ~ #zombie {
+    transform: translate(118px,59px) scale(110%);
+  }
+
+  #profile img:hover ~ #eggs {
+    transform: translate(-133px,60px) scale(100%);
+  }
+
+  #profile img:hover ~ #tulip {
+    transform: translate(105px,10px) scale(70%);
+  }
+
+  #profile img:hover ~ #avocado {
+    transform: translate(-171px,8px) scale(150%);
+  }
+
+  #profile img:hover ~ #heart {
+    transform: translate(121px,-74px) scale(150%);
+  }
+
+  #profile img:hover ~ #mexico {
+    transform: translate(40px,40px) scale(150%);
+  }
+
+  #profile img:hover ~ #film {
+    transform: translate(74px,-118px) scale(70%);
+  }
+
+  #profile img:hover ~ #books {
+    transform: translate(-151px,-105px) scale(150%);
+  }
+
+  nav {
+    transition: 1s;
+    border-radius: 15px;
+  }
+
+  nav:hover {
+    box-shadow: 0px 10px 60px -7px rgba(0,0,0,0.3);
+    transform: scale(105%);
+  }
+
+  footer a {
+    transition: 0.5s;
+  }
+
+  footer a:hover {
+    box-shadow: 0px 10px 60px -7px rgba(0,0,0,0.3);
+    transform: scale(120%);
+    border-radius: 15px;
+  }
+
+
+  /*
+  @keyframes zombieBubble {
+    from {
+      transform: translate(0px,0px) scale(50%);
+    }
+    to {
+      transform: translate(-100px,-100px) scale(150%);
+    }
+  }
+
+*/
+
+
+
+}
+
+ 
 
