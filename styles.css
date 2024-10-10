@@ -51,6 +51,7 @@ header h1 {
   margin: auto;
   letter-spacing: -2px;
   opacity: 80%;
+  padding-top: 20px;
 }
 
 header h2 {
@@ -192,6 +193,7 @@ footer {
   flex-direction: column;
   padding-top: 10px;
   padding-bottom: 50px;
+  box-shadow: 0 50vh 0 50vh #F5F5F5;
 }
 
 footer h1 {
