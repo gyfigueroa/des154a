@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Experimentation - Functions & DOM</title>
+</head>
+<body>
+    <h1>JavaScript Experimentation - Functions & DOM</h1>
+    <p>I'm thinking of a number between 1 and 10...</p>
+    <div class="game">
+        <p id="feedback"></p>
+        <input type="number" id="guessInput" placeholder="Enter a number" />
+        <button id="submitGuess">Submit Guess</button>
+    </div>
+
+    <script>
+        function randomInt(min, max){
+            return Math.floor((max - min + 1) * Math.random()) + min;
+        }
+
+        function higherLower() {
+            const target = randomInt(1, 10);
+            let success = false;
+            const feedback = document.getElementById('feedback');
+            const guessInput = document.getElementById('guessInput');
+            const submitButton = document.getElementById('submitGuess');
+            
+            submitButton.addEventListener('click', function() {
+                const guess = parseInt(guessInput.value);
+                if (isNaN(guess)) {
+                    feedback.innerHTML = "Please enter a valid number!";
+                } else if (guess < target) {
+                    feedback.innerHTML = `${guess} is too low`;
+                } else if (guess > target) {
+                    feedback.innerHTML = `${guess} is too high`;
+                } else {
+                    feedback.innerHTML = `The number was ${target}! You guessed it right!`;
+                    success = true;
+                    submitButton.disabled = true; 
+                }
+                guessInput.value = ''; 
+            });
+        }
+
+        higherLower();
+    </script>
+    
+</body>
+</html>
