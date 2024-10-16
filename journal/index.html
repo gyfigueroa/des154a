@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learing Journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">   
+
+</head>
+<body>
+    <header>
+        <h1 class="stretch">Gabriel's</h1>
+        <h1 class="stretch">Learning</h1>
+        <h1 class="stretch">Journal</h1>
+        <div class="labels">
+            <h2>DES 157A</h2>
+            <h2 class="border">INTERACTIVE MEDIA II</h2>
+            <h2 class="border">FALL 2024</h2>
+        </div>
+        
+    </header>
+
+    <main>
+        <article>
+            <date>Tue Oct 15, 2024</date>
+            <h2>Research Form Design</h2>
+            
+            <p>I really enjoyed reading Salim Ansari’s Medium article, “Best practices for form design,” because it provided me with a lot of ideas that I previously had never considered.  Ansari provides a lot of helpful tips for the general structure of forms, including the importance of a one column layout, minimizing the number of input fields, and organization techniques to reduce form abandonment. One of the things that I absorbed most was copy side of form design. There’s a very specific, neutral, docile style of writing that is the most effective at making sure people complete the forms. This is a very important skill for designers to practice as well. Sometimes I feel myself getting too lost in the visual side of creating that I forget how important language is as a vessel to teach people how to interact with our designs. </p>
+            <p>A website that I think exemplifies best practices is Apple. I scrolled for a few minutes playing with all their very clean animations that they’ve become known for before I landed on the page for buying the latest iPad. They pretty much tick al the boxes of best practices from Ansari’s article but to list couple: they have helper texts and graphics for the more technical decisions; they list out options when there are under four and do drop down menus for longer selections; they use inline labels that transform into normal labels when you type into the field which is pretty satisfying to watch.</p>
+            <a href="https://uxdesign.cc/best-practices-for-form-design-ff5de6ca8e5f">'Best practices for form design' by Salim Ansari</a>
+            <a href="https://www.apple.com/shop/buy-ipad/ipad-pro/">Apple iPad Pro Form</a>
+        </article>
+    </main>
+
+    <script>
+            const s = document.querySelectorAll('.stretch')
+            for (var i = 0; i < s.length; i++){
+                const a = Array.from(s[i].innerHTML);
+                s[i].innerHTML = a.map(c => `<span>${c}</span>`).join('');
+            }
+    </script>
+    
+</body>
+</html>
