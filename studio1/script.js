@@ -9,7 +9,7 @@
     const progressContainer = document.querySelector(".progress");
     const timeLabel = document.querySelector("p");
 
-    const time = 10;//seconds
+    const time = 30;//seconds
 
     
 
