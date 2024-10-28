@@ -4,12 +4,12 @@
     console.log('reading js');
 
     const btnRestart = document.querySelector(".btn-restart");
-    const timeSpan = document.querySelector(".time");
+    let timeSpan = document.querySelector(".time");
     const progressBar = document.querySelector(".progress-inner");
     const progressContainer = document.querySelector(".progress");
     const timeLabel = document.querySelector("p");
 
-    const time = 30;//seconds
+    const time = 10;//seconds
 
     
 
@@ -34,8 +34,7 @@
             btnRestart.id = "visible";
             countDown = 2;
             progressBar.style.width = "0%";
-
-            timeSpan.innerHTML = "TIME'S UP!";
+            timeLabel.innerHTML = `<span class="time">Time's up!</span>`;
         }
     },1000);
 
@@ -44,8 +43,8 @@
     btnRestart.addEventListener('click', function(){
             btnRestart.id = "hidden";
             progressContainer.style.marginBottom = "20px";
-
-            
+            timeLabel.innerHTML = `Time till deadline: <span class="time">60s</span>`;
+            timeSpan = document.querySelector(".time");
             interval = time;
             progressBar.style.width = "100%";
             timeSpan.innerHTML = interval + "s"; 
@@ -72,8 +71,7 @@
                     progressContainer.style.marginBottom = "63px";
                     btnRestart.id = "visible"; 
                     progressBar.style.width = "0%";
-
-                    timeSpan.innerHTML = "TIME'S UP!";
+                    timeLabel.innerHTML = `<span class="time">Time's up!</span>`;
                 }
             },1000);
         })
@@ -85,11 +83,11 @@
 
     const checkColors = function(width){
         if(width > (2/3*100)){
-            progressBar.style.background = "green";
+            progressBar.style.background = "#007B5F";
         } else if (width > (1/3*100)){
-            progressBar.style.background = "yellow";
+            progressBar.style.background = "#F7D417";
         } else {
-            progressBar.style.background = "red";
+            progressBar.style.background = "#CC292B";
         }
     }
 

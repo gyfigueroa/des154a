@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+body {
+    background: linear-gradient(#8DB2B1,#1D1270);
+}
+
 .lacquer-regular {
     font-family: "Lacquer", system-ui;
     font-weight: 400;
@@ -41,19 +45,21 @@
     border-radius: 20px;
     transition: height 1s ease;
     position: relative;
+    margin: auto;
 }
 
 p {
     font-family: "Libre Franklin", sans-serif;
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 20px;
-    font-size: 20pt;
+    font-size: 25pt;
+    letter-spacing: -1px;
 }
 
 .progress {
     width: 100%;
     height: 20px;
-    background: #bebcb2;
+    background: #bebcb28a;
     margin-bottom: 20px;
     border-radius: 15px;
     position: relative;
@@ -73,7 +79,7 @@ p {
 .btn-restart {
     font-family: "Libre Franklin", sans-serif;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 1px;
     font-size: 9pt;
     padding: 10px 20px;
@@ -113,4 +119,11 @@ p {
 #visible {
     opacity: 100%;
     transform: translate(-50%, -50%) scale(1);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
