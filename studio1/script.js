@@ -6,8 +6,10 @@
     const btnRestart = document.querySelector(".btn-restart");
     const timeSpan = document.querySelector(".time");
     const progressBar = document.querySelector(".progress-inner");
+    const progressContainer = document.querySelector(".progress");
+    const timeLabel = document.querySelector("p");
 
-    const time = 5;//seconds
+    const time = 30;//seconds
 
     
 
@@ -28,10 +30,12 @@
             checkColors(progressWidth); 
         } else {
             clearInterval(countDown);
+            progressContainer.style.marginBottom = "63px";
             btnRestart.id = "visible";
             countDown = 2;
             progressBar.style.width = "0%";
-            timeSpan.innerHTML = "Game Over";
+
+            timeSpan.innerHTML = "TIME'S UP!";
         }
     },1000);
 
@@ -39,6 +43,7 @@
 
     btnRestart.addEventListener('click', function(){
             btnRestart.id = "hidden";
+            progressContainer.style.marginBottom = "20px";
 
             
             interval = time;
@@ -61,12 +66,14 @@
                 if(interval > 0){
                     progressBar.style.width = progressWidth + "%";
                     timeSpan.innerHTML = interval + "s";
-                    checkColors(progressWidth) 
+                    checkColors(progressWidth); 
                 } else {
                     clearInterval(countDown);
-                    btnRestart.id = "visible";
+                    progressContainer.style.marginBottom = "63px";
+                    btnRestart.id = "visible"; 
                     progressBar.style.width = "0%";
-                    timeSpan.innerHTML = "Game Over";
+
+                    timeSpan.innerHTML = "TIME'S UP!";
                 }
             },1000);
         })
@@ -77,9 +84,9 @@
     }
 
     const checkColors = function(width){
-        if(width > 60){
+        if(width > (2/3*100)){
             progressBar.style.background = "green";
-        } else if (width > 30){
+        } else if (width > (1/3*100)){
             progressBar.style.background = "yellow";
         } else {
             progressBar.style.background = "red";
