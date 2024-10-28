@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio 1: Mad Libs</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Lacquer&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <p>Time till deadline: <span class="time">60s</span></p>
+
+            <div class="progress">
+                <div class="progress-inner"></div>
+            </div>
+
+            <button class="btn-restart" id="hidden">Go back in time! 🪄</button>
+        </div>
+    </header>
+
+    <main>
+        <form>
+            <label for="dayofweek">Enter a day of the week</label>
+            <input type="text" id="dayofweek">
+            <br>
+            <label for="verb">Enter a verb</label>
+            <input type="text" id="verb">
+            <br>
+            <label for="verbing">Enter a verb ending in -ing</label>
+            <input type="text" id="verbing">
+            <br>
+            <label for="media">Enter a TV show or movie name</label>
+            <input type="text" id="media">
+            <br>
+            <label for="number">Enter a number</label>
+            <input type="text" id="number">
+            <br>
+            <label for="noun">Enter a noun</label>
+            <input type="text" id="noun">
+            <br>
+            <label for="app">Enter an app name</label>
+            <input type="text" id="app">
+            <br>
+            <label for="emotion">Enter an emotion</label>
+            <input type="text" id="emotion">
+            <br>
+            <label for="verb2">Enter a verb</label>
+            <input type="text" id="verb2">
+            <br>
+            <input type="submit" name="send" value="turn it in!">
+        </form>
+
+        <img class="page" id="page1" src="images/linedpaper.svg">
+        <img class="page" id="page2" src="images/linedpaper.svg">
+        <img class="page" id="page3" src="images/linedpaper.svg">
+    </main>
+    
+</body>
+</html>

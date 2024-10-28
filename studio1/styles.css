@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.lacquer-regular {
+    font-family: "Lacquer", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.la-belle-aurore-regular {
+    font-family: "La Belle Aurore", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 
+<uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 100 to 900
+*/
+
+.libre-franklin-regular {
+  font-family: "Libre Franklin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container {
+    width: 90%;
+    padding: 20px;
+    background: #ECEBE4;
+    height: fit-content;
+    color: rgb(86, 80, 68);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    transition: height 1s ease;
+}
+
+p {
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 20pt;
+}
+
+.progress {
+    width: 100%;
+    height: 20px;
+    background: #bebcb2;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-inner {
+    position: absolute;
+    background: green;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: width 1s linear, background-color 10s ease;
+}
+
+.btn-restart {
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 20pt;
+    padding: 10px;
+    width: 200px;
+    font-size: 20px;
+    background-color: rgb(36, 74, 172);
+    color: white;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    transition: all 1s;
+}
+
+#hidden {
+    /* display: none; */
+    visibility: hidden;
+    opacity: 0%;
+}
+
+#visible {
+/*     display: block; */
+    visibility: visible;
+    opacity: 100%;
+}
