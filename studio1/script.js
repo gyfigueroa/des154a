@@ -8,10 +8,13 @@
     const progressBar = document.querySelector(".progress-inner");
     const progressContainer = document.querySelector(".progress");
     const timeLabel = document.querySelector("p");
+    const pageBG = document.querySelector("body");
 
-    const time = 30;//seconds
+    const time = 5;//seconds
+    const start = "#598392";
+    const end = "#D00000";
 
-    
+    /* D00000 */
 
     let interval = time;
     timeSpan.innerHTML = interval + "s";
@@ -34,6 +37,7 @@
             btnRestart.id = "visible";
             countDown = 2;
             progressBar.style.width = "0%";
+            pageBG.style.background = `${end}`;
             timeLabel.innerHTML = `<span class="time">Time's up!</span>`;
         }
     },1000);
@@ -41,6 +45,7 @@
     
 
     btnRestart.addEventListener('click', function(){
+            pageBG.style.background = `${start}`;
             btnRestart.id = "hidden";
             progressContainer.style.marginBottom = "20px";
             timeLabel.innerHTML = `Time till deadline: <span class="time">60s</span>`;
@@ -71,6 +76,7 @@
                     progressContainer.style.marginBottom = "63px";
                     btnRestart.id = "visible"; 
                     progressBar.style.width = "0%";
+                    pageBG.style.background = `${end}`;
                     timeLabel.innerHTML = `<span class="time">Time's up!</span>`;
                 }
             },1000);
