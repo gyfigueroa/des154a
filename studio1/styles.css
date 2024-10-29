@@ -56,7 +56,7 @@ header {
 /*     margin-top: 50px;
  */}
 
-p {
+h3 {
     font-family: "Libre Franklin", sans-serif;
     font-weight: 500;
     margin-bottom: 20px;
@@ -206,7 +206,7 @@ label {
 }
 
 input {
-    font-family: "Lacquer", system-ui;
+    font-family: "Pangolin", cursive;
     font-weight: 400;
     font-style: normal;
     margin-bottom: 23.5px;
@@ -225,11 +225,63 @@ input {
 }
 
 .hidden {
-    visibility: hidden;
+    display: none;
 }
 
 .visible {
-    visibility: visible;
+    display: flex;
 }
+
+#overlay {
+    position: absolute;
+    background-color: rgba(0,0,0,0.25);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 2;
+    backdrop-filter: blur(10px);
+}
+
+div article {
+    background-color: antiquewhite;
+    padding: 20px;
+    border-radius: 20px;
+    margin: auto;
+    max-width: 90%;
+    
+}
+
+#madlib {
+    font-family: "Pangolin", cursive;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30px;
+    margin-bottom: 24px;
+}
+
+.close {
+    font-family: "Libre Franklin", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 9pt;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: white;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    background: rgb(112, 207, 86);
+}
+
+#error {
+    font-family: "Pangolin", cursive;
+    font-weight: 600;
+    font-style: normal;
+    color: orange;
+}
+
+
 
 

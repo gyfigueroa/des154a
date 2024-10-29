@@ -7,8 +7,9 @@
     let timeSpan = document.querySelector(".time");
     const progressBar = document.querySelector(".progress-inner");
     const progressContainer = document.querySelector(".progress");
-    const timeLabel = document.querySelector("p");
+    const timeLabel = document.querySelector("h3");
     const pageBG = document.querySelector("body");
+    const btnSubmit = document.querySelector("#submit");
 
     const time = 30;//seconds
     const start = "#598392";
@@ -45,6 +46,7 @@
     
 
     btnRestart.addEventListener('click', function(){
+        event.preventDefault();
             pageBG.style.background = `${start}`;
             btnRestart.id = "hidden";
             progressContainer.style.marginBottom = "20px";
@@ -96,5 +98,68 @@
             progressBar.style.background = "#CC292B";
         }
     }
+
+    const myForm = document.querySelector('#myform');
+    const madlib = document.querySelector('#madlib');
+    const formData = document.querySelectorAll("input[type=text]");
+    const error = document.querySelector("#error");
+    
+    myForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        
+        processFormData(formData);
+    });
+
+    function processFormData(formData){
+        const words = [];
+        const emptyfields = [];
+        let counter = 0;
+
+        for (const eachWord of formData){
+            if(eachWord.value){
+                words.push(eachWord.value);
+            } else { 
+                emptyfields.push(counter);
+            }
+            counter++;
+            
+        }
+        if (emptyfields.length > 0) {
+            showErrors(formData, emptyfields);
+        } else {
+            clearInterval(countDown);
+            document.querySelector('body').scrollTop = 0;
+            document.getElementById('overlay').className = 'visible';
+            makeMadlib(words);
+
+        }
+    }    
+
+    function showErrors(formData, emptyfields){
+        const errorId = formData[emptyfields[0]].id;
+        const errorText = `Please fill out this field ${errorId}`;
+        error.innerHTML = errorText;
+        document.querySelector(`#${errorId}`).focus();
+    }
+
+    function makeMadlib(words){
+        const myText = `I had a big project due on ${words[0]}, but instead of working, I decided to ${words[1]}. I spent the entire day ${words[2]} and watching ${words[3]}. When I finally sat down to work, I realized I needed ${words[4]} more ${words[5]}. Panic set in as I tried to focus, but my phone kept buzzing with ${words[6]} notifications. By midnight, I felt completely ${words[7]} and wished I had started earlier. Next time, I promise to ${words[8]} instead of procrastinating!`;
+        madlib.innerHTML = myText;
+        for (const eachField of formData) {
+            eachField.value = '';
+        }
+    }
+
+    // closing the overlay
+    document.querySelector('.close').addEventListener('click', function(){
+        event.preventDefault();
+        document.getElementById('overlay').className = 'hidden';
+    })
+
+    document.addEventListener('keydown', function(event){
+        if (event.key == 'Escape'){
+            document.getElementById('overlay').className = 'hidden';
+        }
+    })
 
 }())

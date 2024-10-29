@@ -94,4 +94,15 @@ article date {
     width: fit-content;
 }
 
+.photoPair {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+figure {
+    margin: 0;
+}
+
 
