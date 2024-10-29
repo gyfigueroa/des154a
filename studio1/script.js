@@ -10,7 +10,7 @@
     const timeLabel = document.querySelector("p");
     const pageBG = document.querySelector("body");
 
-    const time = 5;//seconds
+    const time = 30;//seconds
     const start = "#598392";
     const end = "#D00000";
 
