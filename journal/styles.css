@@ -2,6 +2,7 @@
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  color: #5d4b3f;
 
 }
 
@@ -10,9 +11,10 @@
 }
 
 body {
-    border: 4px solid black;
+    border: 4px solid #5d4b3f;
     margin-left: 10px;
     margin-right: 10px;
+    background-color: #f2f4f1;
 }
 
 header {
@@ -36,7 +38,7 @@ header h1{
     flex: auto;
     box-sizing: border-box;
     text-align: center;
-    border-top: 4px solid black;
+    border-top: 4px solid #5d4b3f;
     margin: auto;
     padding-left: 20px;
     padding-right: 20px;
@@ -44,14 +46,14 @@ header h1{
 }
 
 .border {
-    border-left: 4px solid black;
+    border-left: 4px solid #5d4b3f;
 }
 
 article {
     display: flex;
     gap: 10px;
     flex-direction: column;
-    border-top: 4px solid black;
+    border-top: 4px solid #5d4b3f;
     padding: 20px;
     margin: auto;
 }
@@ -63,7 +65,7 @@ article h2, article p {
 article h2 {
     font-size: 50px;
     text-align: left;
-    font-weight: 600;
+    font-weight: 800;
     line-height: 47px;
 }
 
@@ -73,7 +75,7 @@ article a {
     padding: 10px;
     background-color: rgb(13, 255, 0);
     width: fit-content;
-    color:black;
+    color:#5d4b3f;
     text-decoration: none;
     font-style: italic;
     font-weight: 500;
@@ -81,15 +83,15 @@ article a {
 }
 
 article a:hover {
-    color: white;
+    color: #f2f4f1;
     background-color: rgb(255, 0, 93);
 }
 
 article date {
     text-transform: uppercase;
     font-weight: 600;
-    background-color: black;
-    color: white;
+    background-color: rgb(0, 178, 195);
+    color: #f2f4f1;
     padding: 10px;
     width: fit-content;
 }
@@ -108,6 +110,7 @@ figure {
 
 p {
     text-align: left;
+    font-size: 12pt;
 }
 
 @media screen and (min-width: 750px){
