@@ -40,8 +40,8 @@ header h1{
     text-align: center;
     border-top: 4px solid #5d4b3f;
     margin: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 10px 20px;
+    line-height: 23px;
 
 }
 

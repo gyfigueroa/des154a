@@ -11,7 +11,7 @@
     const pageBG = document.querySelector("body");
     const btnSubmit = document.querySelector("#submit");
 
-    const time = 30;//seconds
+    const time = 5;//seconds
     const start = "#598392";
     const end = "#D00000";
 
