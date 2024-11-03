@@ -11,7 +11,7 @@
     const pageBG = document.querySelector("body");
     const btnSubmit = document.querySelector("#submit");
 
-    const time = 5;//seconds
+    const time = 30;//seconds
     const start = "#598392";
     const end = "#D00000";
 
@@ -34,11 +34,12 @@
             checkColors(progressWidth); 
         } else {
             clearInterval(countDown);
-            progressContainer.style.marginBottom = "63px";
-            btnRestart.id = "visible";
+            //progressContainer.style.marginBottom = "63px";
+            //btnRestart.id = "visible";
+            document.getElementById('timeroverlay').className = 'showing';
             countDown = 2;
             progressBar.style.width = "0%";
-            pageBG.style.background = `${end}`;
+            //pageBG.style.background = `${end}`;
             timeLabel.innerHTML = `<span class="time">Time's up!</span>`;
         }
     },1000);
@@ -47,7 +48,8 @@
 
     btnRestart.addEventListener('click', function(){
         event.preventDefault();
-            pageBG.style.background = `${start}`;
+        document.getElementById('timeroverlay').className = 'hidden';
+            //pageBG.style.background = `${start}`;
             btnRestart.id = "hidden";
             progressContainer.style.marginBottom = "20px";
             timeLabel.innerHTML = `Time till deadline: <span class="time">60s</span>`;
@@ -75,10 +77,11 @@
                     checkColors(progressWidth); 
                 } else {
                     clearInterval(countDown);
-                    progressContainer.style.marginBottom = "63px";
-                    btnRestart.id = "visible"; 
+                    //progressContainer.style.marginBottom = "63px";
+                    //btnRestart.id = "visible"; 
+                    document.getElementById('timeroverlay').className = 'showing';
                     progressBar.style.width = "0%";
-                    pageBG.style.background = `${end}`;
+                    //pageBG.style.background = `${end}`;
                     timeLabel.innerHTML = `<span class="time">Time's up!</span>`;
                 }
             },1000);

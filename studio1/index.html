@@ -18,6 +18,13 @@
 
 <body>
 
+    <section id="timeroverlay" class="hidden">
+        <article>
+            <h1>This assignment is overdue!</h1>
+            <button class="btn-restart" id="visible">GO BACK IN TIME 🪄</button>
+        </article>
+    </section>
+
     <header>
         <div class="container">
             <h3>Time till deadline: <span class="time">60s</span></h3>
@@ -26,52 +33,114 @@
                 <div class="progress-inner"></div>
             </div>
 
-            <button class="btn-restart" id="hidden">GO BACK IN TIME 🪄</button>
+            <!-- <button class="btn-restart" id="hidden">GO BACK IN TIME 🪄</button> -->
         </div>
     </header>
 
     <main>
-        <div id="menu">
-            <img id="pencil" src="images/pencil.svg">
-            <img id="highlighter" src="images/highlighter.svg">
-            <img id="eraser" src="images/eraser.svg">
+        <table>
             <form id="myform">
-                <h1>Your Assignment</h1>
-                <label for="dayofweek">Enter a day of the week</label>
-                <input type="text" id="dayofweek">
-                <br>
-                <label for="verb">Enter a verb</label>
-                <input type="text" id="verb">
-                <br>
-                <label for="verbing">Enter a verb ending in -ing</label>
-                <input type="text" id="verbing">
-                <br>
-                <label for="media">Enter a TV show or movie</label>
-                <input type="text" id="media">
-                <br>
-                <label for="number">Enter a number</label>
-                <input type="text" id="number">
-                <br>
-                <label for="noun">Enter a noun</label>
-                <input type="text" id="noun">
-                <br>
-                <label for="app">Enter an app name</label>
-                <input type="text" id="app">
-                <br>
-                <label for="emotion">Enter an emotion</label>
-                <input type="text" id="emotion">
-                <br>
-                <label for="verb2">Enter a verb</label>
-                <input type="text" id="verb2">
-                <br>
-                <input type="submit" name="send" value="turn it in!" id="submit">
-                <p id="error"></p>
-            </form>
-            <img id="page1" src="images/linedpapermobile.svg">
-            <img class="hidden" id="page2" src="images/linedpapermobile.svg">
-            <img class="hidden" id="page3" src="images/linedpapermobile.svg">
+                <tr>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2">
+                        <h1>Your Assignment</h1>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2">
+                        <label for="dayofweek">Enter a day of the week:</label>
+                        <input type="text" id="dayofweek">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2">
+                        <label for="verb">Enter a verb:</label>
+                        <input type="text" id="verb">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2">
+                        <label for="verbing">Enter a verb ending in -ing:</label>
+                        <input type="text" id="verbing">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2">
+                        <label for="media">Enter a TV show or movie:</label>
+                        <input type="text" id="media">
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2">
+                        <label for="number">Enter a number:</label>
+                        <input type="text" id="number">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2">
+                        <label for="noun">Enter a noun:</label>
+                        <input type="text" id="noun">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2">
+                        <label for="app">Enter an app name:</label>
+                        <input type="text" id="app">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2">
+                        <label for="emotion">Enter an emotion:</label>
+                        <input type="text" id="emotion">
+                    </td>
+                </tr>
             
-        </div>
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2">
+                        <label for="verb2">Enter a verb:</label>
+                        <input type="text" id="verb2">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2">
+                        <input type="submit" name="send" value="turn it in!" id="submit">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2">
+                        <p id="error"></p>
+                    </td>
+                </tr>
+            </form>
+        </table>
+        <!-- <img id="pencil" src="images/pencil.svg">
+        <img id="highlighter" src="images/highlighter.svg">
+        <img id="eraser" src="images/eraser.svg"> -->
 
         <div id="overlay" class="hidden">
             <article>
