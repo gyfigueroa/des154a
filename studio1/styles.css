@@ -5,9 +5,18 @@
     color: rgb(88, 73, 43);
 }
 
+html {
+    overflow-x: hidden;
+}
+
+
 body {
-    background: linear-gradient(20deg, #3f87a6, #ebf8e1, #f69d3c);
+    background: rgb(34,193,195);
+background: linear-gradient(60deg, rgba(34,193,195,1) 0%, rgba(236,255,218,1) 50%, rgba(253,187,45,1) 100%);
     transition: all 1s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .lacquer-regular {
@@ -35,8 +44,8 @@ body {
 }
 
 header {
-    padding-top: 50px;
-    padding-bottom: 25px;
+    margin-top: 50px;
+    /* margin-bottom: 25px; */
 }
 
 .container {
@@ -122,23 +131,11 @@ button.btn-restart {
 	}
 }
 
-/* #hidden {
-    opacity: 0%;
-    transform: translate(-50%, -50%) scale(0);
-}
-
-#visible {
-    opacity: 100%;
-    transform: translate(-50%, -50%) scale(0.9);
-} */
-
 main{
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 50px;
-    margin-top: 30px;
-    overflow: hidden;
+    overflow-x: clip;
 }
 
 table h1 {
@@ -154,12 +151,22 @@ table {
     font-family: "Pangolin", cursive;
     background-color: #fffa9b;
     border-collapse: collapse;
-    width: 90%;
     max-width: max-content;
     border-radius:5px;
     overflow: hidden;
     box-shadow: 0px 10px 30px -7px rgba(0, 0, 0, 0.4);
 }
+.menu {
+    position: relative;
+    margin: auto;
+}
+
+.sticker {
+    position: absolute;
+    filter: drop-shadow(0px 6px 3px rgba(0, 0, 0, 0.2))
+}
+
+
 
 td {
     border-bottom: #004a4f8d 2px solid;
@@ -208,12 +215,12 @@ input {
 
 #timeroverlay {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(10px);
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
     transition: opacity 1s ease;
 }
 
@@ -223,6 +230,7 @@ input {
     font-weight: 600;
     text-align: center;
     margin: 10px 0px 0px 0px;
+    color: white;
 }
 
 #timeroverlay article {
@@ -232,16 +240,92 @@ input {
     align-items: center;
     flex-direction: column;
     box-sizing: border-box;
-    background-color: #ffffff;
+    background: linear-gradient(126deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 100%);
+    border: rgba(255, 255, 255, 0.4) 1px solid;
+    box-shadow: inset 10px 10px 62px -17px rgba(255,255,255,1), 0px 10px 30px -7px rgba(255, 255, 255, 0.4);;
     padding: 20px;
     border-radius: 30px;
-    width: 300px;
+    width: 325px;
     height: auto;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
+}
+
+
+#pencil {
+    bottom: -68px;
+    left: 395px;
+    rotate: -146deg;
+}
+
+#highlighter {
+    bottom: -287px;
+    left: -83px;
+    rotate: 79deg;
+}
+
+#eraser {
+    bottom: -171px;
+    right: -11px;
+    rotate: -211deg;
+}
+
+#overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 110vh;
+    transition: opacity 1s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#overlay table {
+    position: relative;
+    margin: auto;
+    rotate: -3deg;
+}
+
+
+#madlib {
+    font-family: "Pangolin", cursive;
+    position: absolute;
+    left: 37px;
+    top: 86px;
+    z-index: 1;
+    rotate: -3deg;
+    max-width: 320px;
+    font-size: 14pt;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    gap: 10px;
+}
+
+footer p {
+    font-family: "Libre Franklin", sans-serif;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+footer h2 {
+    font-family: "Homemade Apple", cursive;
+    color: white;
 }
 
 /* 

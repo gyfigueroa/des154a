@@ -10,12 +10,12 @@
     const timeLabel = document.querySelector("h3");
     const pageBG = document.querySelector("body");
     const btnSubmit = document.querySelector("#submit");
+    let submitted = false;
 
     const time = 30;//seconds
     const start = "#598392";
     const end = "#D00000";
 
-    /* D00000 */
 
     let interval = time;
     timeSpan.innerHTML = interval + "s";
@@ -28,28 +28,28 @@
 
         let progressWidth = (interval / time) * 100;
 
+        if (submitted == true){
+            clearInterval(countDown);
+        }
+
         if(interval > 0){
             progressBar.style.width = progressWidth + "%";
             timeSpan.innerHTML = interval + "s";
             checkColors(progressWidth); 
         } else {
             clearInterval(countDown);
-            //progressContainer.style.marginBottom = "63px";
-            //btnRestart.id = "visible";
             document.getElementById('timeroverlay').className = 'showing';
             countDown = 2;
             progressBar.style.width = "0%";
-            //pageBG.style.background = `${end}`;
             timeLabel.innerHTML = `<span class="time">Time's up!</span>`;
         }
     },1000);
 
     
 
-    btnRestart.addEventListener('click', function(){
+    btnRestart.addEventListener('click', function(event){
         event.preventDefault();
         document.getElementById('timeroverlay').className = 'hidden';
-            //pageBG.style.background = `${start}`;
             btnRestart.id = "hidden";
             progressContainer.style.marginBottom = "20px";
             timeLabel.innerHTML = `Time till deadline: <span class="time">60s</span>`;
@@ -71,17 +71,18 @@
         
                 let progressWidth = (interval / time) * 100;
         
+                if (submitted == true){
+                    clearInterval(countDown);
+                }
+
                 if(interval > 0){
                     progressBar.style.width = progressWidth + "%";
                     timeSpan.innerHTML = interval + "s";
                     checkColors(progressWidth); 
                 } else {
                     clearInterval(countDown);
-                    //progressContainer.style.marginBottom = "63px";
-                    //btnRestart.id = "visible"; 
                     document.getElementById('timeroverlay').className = 'showing';
                     progressBar.style.width = "0%";
-                    //pageBG.style.background = `${end}`;
                     timeLabel.innerHTML = `<span class="time">Time's up!</span>`;
                 }
             },1000);
@@ -130,9 +131,8 @@
         if (emptyfields.length > 0) {
             showErrors(formData, emptyfields);
         } else {
-            clearInterval(countDown);
-            document.querySelector('body').scrollTop = 0;
-            document.getElementById('overlay').className = 'visible';
+            submitted = true;
+            document.getElementById('overlay').className = 'showing';
             makeMadlib(words);
 
         }
