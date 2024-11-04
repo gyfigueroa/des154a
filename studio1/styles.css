@@ -12,36 +12,12 @@ html {
 
 body {
     background: rgb(34,193,195);
-background: linear-gradient(60deg, rgba(34,193,195,1) 0%, rgba(236,255,218,1) 50%, rgba(253,187,45,1) 100%);
+    background: linear-gradient(60deg, rgba(34,193,195,1) 0%, rgba(236,255,218,1) 50%, rgba(253,187,45,1) 100%);
     transition: all 1s ease;
     display: flex;
     flex-direction: column;
     gap: 20px;
     overflow: hidden;
-}
-
-.lacquer-regular {
-    font-family: "Lacquer", system-ui;
-    font-weight: 400;
-    font-style: normal;
-}
-  
-.la-belle-aurore-regular {
-    font-family: "La Belle Aurore", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
-
-/* 
-<uniquifier>: Use a unique and descriptive class name
-<weight>: Use a value from 100 to 900
-*/
-
-.libre-franklin-regular {
-  font-family: "Libre Franklin", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
 }
 
 header {
@@ -139,13 +115,14 @@ main{
     overflow-x: clip;
 }
 
-table h1 {
+table h2 {
     font-family: "Homemade Apple", cursive;
     font-weight: 400;
     font-style: normal;
     font-size: 25pt;
     padding: 0px 10px;
     margin-bottom: 0px;
+    margin-top: 22px;
 }
 
 table {
@@ -245,7 +222,7 @@ input {
     transition: opacity 1s ease;
 }
 
-#timeroverlay h1 {
+#timeroverlay h2 {
     font-family: "Libre Franklin", sans-serif;
     font-size: 20pt;
     font-weight: 600;
@@ -279,34 +256,34 @@ input {
 #pencil {
     bottom: -68px;
     left: 395px;
-    rotate: -146deg;
+    transform: rotate( -146deg);
 }
 
 #pencil2 {
     opacity: 0;
     bottom: -68px;
     left: 395px;
-    rotate: -146deg;
+    transform: rotate( -146deg);
 }
 
 #highlighter2 {
     opacity: 0;
     bottom: -287px;
     left: -83px;
-    rotate: 79deg;
+    transform: rotate( 79deg);
 }
 
 #highlighter {
     bottom: -287px;
     left: -83px;
-    rotate: 79deg;
+    transform: rotate( 79deg);
 }
 
 
 #eraser {
     bottom: -171px;
     right: -11px;
-    rotate: -211deg;
+    transform: rotate( -211deg);
 }
 
 #overlay {
@@ -327,7 +304,7 @@ input {
 #overlay table {
     position: relative;
     margin: auto;
-    rotate: -3deg;
+    transform: rotate( -3deg);
 }
 
 
@@ -337,7 +314,7 @@ input {
     left: 37px;
     top: 86px;
     z-index: 1;
-    rotate: -3deg;
+    transform: rotate( -3deg);
     max-width: 320px;
     font-size: 14pt;
 }
@@ -378,13 +355,13 @@ footer h2 {
     #sheet1 {
         opacity: 1;
         top: 78px;
-        rotate: 15deg;
+        transform: rotate( 15deg);
         left: 46px;
     }
     
     #sheet2 {
         opacity: 1;
-        rotate: -9deg;
+        transform: rotate( -9deg);
         top: 56px;
         left: -50px;
     }
@@ -396,20 +373,20 @@ footer h2 {
     #pencil {
         bottom: 66px;
         left: 480px;
-        rotate: -130deg;
+        transform: rotate( -130deg);
     }
 
     #pencil2 {
         opacity: 1;
         bottom: 50px;
         left: -69px;
-        rotate: 17deg;
+        transform: rotate( 17deg);
     }
 
     #highlighter {
         bottom: -278px;
         left: -151px;
-        rotate: 79deg;
+        transform: rotate( 79deg);
     }
 
 
@@ -417,13 +394,13 @@ footer h2 {
         opacity: 1;
         bottom: -102px;
         left: 409px;
-        rotate: -113deg;
+        transform: rotate( -113deg);
     }
 
     #eraser {
         bottom: -113px;
         right: 0px;
-        rotate: -243deg;
+        transform: rotate( -243deg);
     }
 
     header {
