@@ -12,13 +12,17 @@
     const btnSubmit = document.querySelector("#submit");
     let submitted = false;
 
-    const time = 30;//seconds
+    const time = 5;//seconds
     const start = "#598392";
     const end = "#D00000";
 
 
     let interval = time;
     timeSpan.innerHTML = interval + "s";
+
+    function startCountdown(){
+        
+    }
 
     var countDown = setInterval(() => {
         progressBar.style.transition = `width 1s linear, background-color ${time/3}s ease`;
@@ -50,43 +54,42 @@
     btnRestart.addEventListener('click', function(event){
         event.preventDefault();
         document.getElementById('timeroverlay').className = 'hidden';
-            btnRestart.id = "hidden";
-            progressContainer.style.marginBottom = "20px";
-            timeLabel.innerHTML = `Time till deadline: <span class="time">60s</span>`;
-            timeSpan = document.querySelector(".time");
-            interval = time;
-            progressBar.style.width = "100%";
-            timeSpan.innerHTML = interval + "s"; 
+        btnRestart.id = "hidden";
+        timeLabel.innerHTML = `Time till deadline: <span class="time">60s</span>`;
+        timeSpan = document.querySelector(".time");
+        interval = time;
+        progressBar.style.width = "100%";
+        timeSpan.innerHTML = interval + "s"; 
 
-            progressBar.style.transition = "width 0.5s ease, background-color 0.2s linear";
+        progressBar.style.transition = "width 0.5s ease, background-color 0.2s linear";
 
-            progressBar.style.background = "green";
+        progressBar.style.background = "green";
 
-            sleep(1).then(() => { progressBar.style.transition = `width 1s linear, background-color ${time/3}s linear`; });
-            
-            
-            var countDown = setInterval(() => {
-                interval--;
-                console.log(`countdown: ${countDown}, interval: ${interval}`);
+        sleep(1).then(() => { progressBar.style.transition = `width 1s linear, background-color ${time/3}s linear`; });
         
-                let progressWidth = (interval / time) * 100;
         
-                if (submitted == true){
-                    clearInterval(countDown);
-                }
+        var countDown = setInterval(() => {
+            interval--;
+            console.log(`countdown: ${countDown}, interval: ${interval}`);
+    
+            let progressWidth = (interval / time) * 100;
+    
+            if (submitted == true){
+                clearInterval(countDown);
+            }
 
-                if(interval > 0){
-                    progressBar.style.width = progressWidth + "%";
-                    timeSpan.innerHTML = interval + "s";
-                    checkColors(progressWidth); 
-                } else {
-                    clearInterval(countDown);
-                    document.getElementById('timeroverlay').className = 'showing';
-                    progressBar.style.width = "0%";
-                    timeLabel.innerHTML = `<span class="time">Time's up!</span>`;
-                }
-            },1000);
-        })
+            if(interval > 0){
+                progressBar.style.width = progressWidth + "%";
+                timeSpan.innerHTML = interval + "s";
+                checkColors(progressWidth); 
+            } else {
+                clearInterval(countDown);
+                document.getElementById('timeroverlay').className = 'showing';
+                progressBar.style.width = "0%";
+                timeLabel.innerHTML = `<span class="time">Time's up!</span>`;
+            }
+        },1000);
+    })
     
 
     function sleep(ms) {
