@@ -103,10 +103,9 @@ button.btn-restart {
     font-family: "Libre Franklin", sans-serif;
     font-weight: 600;
     letter-spacing: 1px;
-    font-size: 8pt;
     padding: 10px 20px;
     width: 100%;
-    font-size: 20px;
+    font-size: 14pt;
     color: white;
     border: 0;
     outline: none;
@@ -157,6 +156,7 @@ table {
     border-radius:5px;
     overflow: hidden;
     box-shadow: 0px 10px 30px -7px rgba(0, 0, 0, 0.4);
+    transition: all 0.5s ease;
 }
 .menu {
     position: relative;
@@ -342,6 +342,15 @@ input {
     font-size: 14pt;
 }
 
+button.close {
+    /* outline: none; */
+    border: none;
+    padding: 5px 5px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    background: #fe00ff75;
+}
+
 
 footer {
     display: flex;
@@ -429,6 +438,14 @@ footer h2 {
         margin-top: 20px;
         margin-bottom: 112px;
         gap: 10px;
+    }
+
+    button.btn-restart:hover {
+        /* transform: scale(1.1); */
+        /* height: 62px; */
+        font-size: 17pt;
+        margin-top: 15px;
+        box-shadow: 0 0 40px 5px #48abe0, 0 0 20px 1px #ebecca, 0 0 75px 18px #8a2be2, 0 0 80px 25px #ff1493;
     }
 
 

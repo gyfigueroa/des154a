@@ -12,7 +12,7 @@
     const btnSubmit = document.querySelector("#submit");
     let submitted = false;
 
-    const time = 5;//seconds
+    const time = 30;//seconds
     const start = "#598392";
     const end = "#D00000";
 
@@ -20,41 +20,39 @@
     let interval = time;
     timeSpan.innerHTML = interval + "s";
 
+    startCountdown();
+
     function startCountdown(){
-        
-    }
-
-    var countDown = setInterval(() => {
-        progressBar.style.transition = `width 1s linear, background-color ${time/3}s ease`;
-        interval--;
-        console.log(`countdown: ${countDown}, interval: ${interval}`);
-        
-
-        let progressWidth = (interval / time) * 100;
-
-        if (submitted == true){
-            clearInterval(countDown);
-        }
-
-        if(interval > 0){
-            progressBar.style.width = progressWidth + "%";
-            timeSpan.innerHTML = interval + "s";
-            checkColors(progressWidth); 
-        } else {
-            clearInterval(countDown);
-            document.getElementById('timeroverlay').className = 'showing';
-            countDown = 2;
-            progressBar.style.width = "0%";
-            timeLabel.innerHTML = `<span class="time">Time's up!</span>`;
-        }
-    },1000);
-
+        var countDown = setInterval(() => {
+            progressBar.style.transition = `width 1s linear, background-color ${time/3}s ease`;
+            interval--;
+            console.log(`countdown: ${countDown}, interval: ${interval}`);
+            
     
+            let progressWidth = (interval / time) * 100;
+    
+            if (submitted == true){
+                clearInterval(countDown);
+            }
+    
+            if(interval > 0){
+                progressBar.style.width = progressWidth + "%";
+                timeSpan.innerHTML = interval + "s";
+                checkColors(progressWidth); 
+            } else {
+                clearInterval(countDown);
+                document.getElementById('timeroverlay').className = 'showing';
+                countDown = 2;
+                progressBar.style.width = "0%";
+                timeLabel.innerHTML = `<span class="time">Time's up!</span>`;
+            }
+        },1000);
+    }    
+
 
     btnRestart.addEventListener('click', function(event){
         event.preventDefault();
         document.getElementById('timeroverlay').className = 'hidden';
-        btnRestart.id = "hidden";
         timeLabel.innerHTML = `Time till deadline: <span class="time">60s</span>`;
         timeSpan = document.querySelector(".time");
         interval = time;
@@ -68,27 +66,7 @@
         sleep(1).then(() => { progressBar.style.transition = `width 1s linear, background-color ${time/3}s linear`; });
         
         
-        var countDown = setInterval(() => {
-            interval--;
-            console.log(`countdown: ${countDown}, interval: ${interval}`);
-    
-            let progressWidth = (interval / time) * 100;
-    
-            if (submitted == true){
-                clearInterval(countDown);
-            }
-
-            if(interval > 0){
-                progressBar.style.width = progressWidth + "%";
-                timeSpan.innerHTML = interval + "s";
-                checkColors(progressWidth); 
-            } else {
-                clearInterval(countDown);
-                document.getElementById('timeroverlay').className = 'showing';
-                progressBar.style.width = "0%";
-                timeLabel.innerHTML = `<span class="time">Time's up!</span>`;
-            }
-        },1000);
+        startCountdown();
     })
     
 
@@ -135,6 +113,7 @@
             showErrors(formData, emptyfields);
         } else {
             submitted = true;
+            error.innerHTML = '';
             document.getElementById('overlay').className = 'showing';
             makeMadlib(words);
 
@@ -160,11 +139,16 @@
     document.querySelector('.close').addEventListener('click', function(){
         event.preventDefault();
         document.getElementById('overlay').className = 'hidden';
+        submitted = false;
+        startCountdown();
     })
 
     document.addEventListener('keydown', function(event){
         if (event.key == 'Escape'){
             document.getElementById('overlay').className = 'hidden';
+            submitted = false;
+            startCountdown();
+            
         }
     })
 
