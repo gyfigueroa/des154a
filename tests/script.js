@@ -4,7 +4,7 @@
     console.log('reading js');
 
     let sliders = document.querySelectorAll('.slider');
-    let time = [0,400,300,200,100];
+    let resetTime = [0,400,300,200,100];
 
     sliders.forEach((slider,idxSlider) => {
         let images = slider.querySelectorAll('.img');
@@ -26,7 +26,7 @@
                 for (let i = images.length-1; i > 0; i--){
                     setTimeout(function(){
                         images[i].id = hiddenId;
-                    }, time[i]);    
+                    }, resetTime[i]);    
                 }
                 current = 0;
             }
