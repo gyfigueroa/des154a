@@ -88,6 +88,8 @@ window.addEventListener('load', function () {
         const style = `bgcolor${counter}`;
         document.querySelector('body').className = style;
 
+        document.querySelector(".progressbar").style.width = `calc(100vw*(${counter-1}/5))`;
+
         const section = document.querySelector(`#section0${counter}`)
         if (document.querySelector('.container-active')){
             document.querySelector('.container-active').className = 'container';
@@ -192,8 +194,12 @@ window.addEventListener('load', function () {
     }
 
     // duplicate the polaroids for seamless infinite loop
-    var copy = this.document.querySelector('.polaroid-slide').cloneNode(true);
-    this.document.querySelector(".polaroids").appendChild(copy);
+    let copy = this.document.querySelector('#polarslide1').cloneNode(true);
+    this.document.querySelector("#polaroids1").appendChild(copy);
+
+    copy = this.document.querySelector('#polarslide2').cloneNode(true);
+    this.document.querySelector("#polaroids2").appendChild(copy);
+
 
     resetPagePosition();
 

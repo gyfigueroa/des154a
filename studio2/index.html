@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Every Picture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Photo Journal</h1>
+        <h1>gabriel's photos</h1>
         <p>The first section is on the page</p>
+        <div class="progressbar" id="progressbar-visible"></div>
     </header>
 
     <section id="section01" class="">
-        <div id="sec1col1">
-            <h2>Photo Journal</h2>
+        <div id="sec1col1" class="glassbox">
+            <h2>photo journal</h2>
             <p>Gabriel Figueroa</p>
             <p>DES 157A - FALL 2024</p>
         </div>
@@ -93,21 +97,15 @@
                     </div>
                 </div>
             </div>
-            <div class="polaroids">
-                <div class="polaroid-slide">
+            <div class="polaroids" id="polaroids1">
+                <div class="polaroid-slide" id="polarslide1">
                     <img src="images/1.jpg" class="polaroid">
                     <img src="images/2.jpg" class="polaroid">
                     <img src="images/1.jpg" class="polaroid">
                     <img src="images/2.jpg" class="polaroid">
                     <img src="images/3.jpg" class="polaroid">
                 </div>
-                <div class="polaroid-slide">
-                    <img src="images/1.jpg" class="polaroid">
-                    <img src="images/2.jpg" class="polaroid">
-                    <img src="images/1.jpg" class="polaroid">
-                    <img src="images/2.jpg" class="polaroid">
-                    <img src="images/3.jpg" class="polaroid">
-                </div>
+                
             </div>
         </div>
         
@@ -126,21 +124,14 @@
         </div>
     </section>
     <section id="section05" class="">
-        <div id="sec5col1">
-            <div class="polaroids">
-                <div class="polaroid-slide">
-                    <img src="" class="polaroid">
-                    <img src="" class="polaroid">
-                    <img src="" class="polaroid">
-                    <img src="" class="polaroid">
-                    <img src="" class="polaroid">
-                </div>
-                <div class="polaroid-slide">
-                    <img src="" class="polaroid">
-                    <img src="" class="polaroid">
-                    <img src="" class="polaroid">
-                    <img src="" class="polaroid">
-                    <img src="" class="polaroid">
+        <div id="sec5col1" class="glassbox">
+            <div class="polaroids" id="polaroids2">
+                <div class="polaroid-slide" id="polarslide2">
+                    <img src="images/1.jpg" class="polaroid">
+                    <img src="images/2.jpg" class="polaroid">
+                    <img src="images/1.jpg" class="polaroid">
+                    <img src="images/2.jpg" class="polaroid">
+                    <img src="images/3.jpg" class="polaroid">
                 </div>
             </div>
         </div>
@@ -263,8 +254,10 @@
     </section>
 
     <footer>
-        <p1>designed and developed by</p1>
-        <h3>Gabriel Figueroa</h3>
+        <div>
+            <p1>designed and developed by</p1>
+            <h3>Gabriel Figueroa</h3>
+        </div>
     </footer>
 
     

@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Bricolage Grotesque", sans-serif;
+    color: #f3f4f8;;
 }
 
 body {
@@ -18,11 +20,26 @@ header {
     width: 100%;
     color: #f3f4f8;
     background-color: #16161876;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     place-content: center;
     text-align: center;
     z-index: 3;
     backdrop-filter: blur(10px);
+}
+
+p, h1, h2 {
+  text-shadow: -1px -1px 2px rgba(255,255,255,0.25);
+}
+
+.progressbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: calc(100vw*(0/5));
+    background-color: white;
+    transition: all 1s ease;
 }
 
 h1, p {
@@ -47,7 +64,6 @@ section {
 }
 
 #sec1col1 {
-    background-color: #d27f7f;
     flex: 1;
     border-radius: 20px;
     display: flex;
@@ -55,6 +71,12 @@ section {
     align-items: flex-start;
     justify-content: center;
     padding: 20px;
+}
+
+.glassbox{
+    background:linear-gradient(135deg,#252525, #121212); ;
+    box-shadow: inset 10px 10px 43px 0px rgba(255,255,255,0.05), 10px 10px 23px 10px rgba(255,255,255,0.05),inset 2px 2px 10px -3px rgba(255,255,255,0.5);
+    /* border: #252525 1px solid;  */
 }
 
 #sec1col2 {
@@ -233,7 +255,6 @@ section {
 }
 
 #sec5col1 {
-    background-color: #d27f7f;
     flex: 1;
     border-radius: 20px;
     display: flex;
@@ -311,12 +332,18 @@ section {
 }
 
 footer {
-    background-color: #f40c9f;
+    background-color: #000000;
     display: flex;
     height: 30vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Without animating color change */
@@ -343,7 +370,7 @@ footer {
 
 .onscreen {
     /* border: 6px solid #f40c9f; */
-    font-size: 2em;
+    font-size: 1em;
 }
 
 /*
