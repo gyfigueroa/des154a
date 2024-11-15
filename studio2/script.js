@@ -109,9 +109,24 @@ window.addEventListener('load', function () {
                 if (idx == 0){
                     images[idx].id = visibleId;
                 } else {
-                    images[idx].id = hiddenId;
+                    /* if (images[1].id == visibleId){
+                        images[1].id = visibleId;
+                    }else{ */
+                        images[idx].id = hiddenId;
+                    
+                    
                 }
             })
+
+            /* if (images[1].id != visibleId){
+                setTimeout(function(){
+                    images[1].id = visibleId;
+                    current++;
+                }, 1000);
+            }
+             */
+
+            
 
             const myInterval = setInterval(function(){
                 if (current < images.length){
