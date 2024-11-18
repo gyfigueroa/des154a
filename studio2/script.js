@@ -43,7 +43,8 @@ window.addEventListener('load', function () {
     console.log(sectionTops);
 
     window.addEventListener('scroll', function(){
-        pagetop = window.scrollY + 600;
+        console.log(window.scrollY);
+        pagetop = window.scrollY + document.querySelector(`#section0${counter}`).offsetHeight ;
         //console.log(pagetop);
         if (pagetop > sectionTops[counter]){
             counter++;
@@ -51,6 +52,10 @@ window.addEventListener('load', function () {
         } else if (counter > 1 && pagetop < sectionTops[counter - 1]){
             counter--;
             //console.log(`scrolling up ${counter}`);
+        }
+
+        if (this.window.scrollY == 0){
+            counter = 0;
         }
 
         if (counter != prevCounter){

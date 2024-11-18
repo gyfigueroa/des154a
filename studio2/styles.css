@@ -3,7 +3,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Bricolage Grotesque", sans-serif;
-    color: #f3f4f8;;
+    color: #f3f4f8;
+    
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
 }
 
 body {
@@ -11,6 +17,7 @@ body {
     color: #4a4a4a;
     /* padding-bottom: calc(100svh - 100px); */
     margin: 0;
+    background-color: #161618;
 }
 
 header {
@@ -216,7 +223,7 @@ section {
 
 .polaroid-slide img {
     height: 50vh;
-    aspect-ratio: 2/3;
+    aspect-ratio: 4/5;
     background-color: #f40c9f;
     margin: 0 20px;
 }
