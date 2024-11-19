@@ -101,7 +101,8 @@ window.addEventListener('load', function () {
         if (document.querySelector('.container-active')){
             document.querySelector('.container-active').className = 'container';
         }
-
+        
+        // hide the header at the top of the page
         if (counter === 1){
             header.style.opacity = 0;
         } else {
@@ -116,40 +117,25 @@ window.addEventListener('load', function () {
         sliders.forEach((slider,idxSlider) => {
             let images = slider.querySelectorAll('.img');
             //console.log(images);
-            /* let slider = document.querySelector('.slider'); */
             let current = 1;
 
             let { visibleState, hiddenState } = getStateByClass (slider);
 
-            /* if (images[0].id == visibleState    && images[1].id == hiddenState  ){
-
-            }
- */
+            // load each image in each slider and set the first one to visible and the rest to hidden
             images.forEach((img, idx) =>{
                 img.style.backgroundImage = `url(./images/section${counter}/slider${idxSlider+1}/${idx+1}.jpg)`;
                 if (idx == 0){
                     if (img.classList.contains(hiddenState) && !img.classList.contains(visibleState)){
                         img.classList.replace(hiddenState, visibleState);
                     }
-                    /* img.classList.add = visibleState; */
                 } else {
                     if (img.classList.contains(visibleState) && !img.classList.contains(hiddenState)){
                         img.classList.replace(visibleState,hiddenState);
                     }
-                    /* img.classList.replace(visible, visibleState) */
                 }
             })
-
-            /* if (images[1].id != visibleState   ){
-                setTimeout(function(){
-                    images[1].id = visibleState   ;
-                    current++;
-                }, 1000);
-            }
-            */
-
             
-    
+            // slider functionality
             const myInterval = setInterval(function(){
                 if (current < images.length){
                     images[current].classList.replace(hiddenState, visibleState);
@@ -160,36 +146,19 @@ window.addEventListener('load', function () {
                             images[i].classList.replace(visibleState,hiddenState)  ;
                         }, resetTime[i]);    
                     }
-                    current = 0;
+                    current = 1;
                 }
             }, 2000);
+
+            // add all intervals to a a set that can be cleared every time a section is changed
             interval.intervals.add(myInterval);
             
         })
 
+        // shrink effect for the third section
         if (counter === 3){
             document.querySelector('.container').className = 'container-active';
         }
-
-        if (counter === 1){
-            header.style.opacity = 0;
-        }
-/* 
-
-        // change header in each section and make section specific changes
-        switch(counter){
-            case 1: headerP.innerHTML = `1`; break;
-            case 2: headerP.innerHTML = `${counter}`; break;
-            case 3: 
-                headerP.innerHTML = `${counter}`; 
-                document.querySelector('.container').className = 'container-active';
-                break;
-            case 4: headerP.innerHTML = `${counter}`; break;
-            case 5: headerP.innerHTML = `${counter}`; break;
-            case 6: headerP.innerHTML = `${counter}`; break;
-            //case 7: headerP.innerHTML = "The seventh section is on the page"; break;
-            default: headerP.innerHTML = "Oooops something went wrong!"; break;
-        } */
 
         for (const eachPost of sections){
             eachPost.className = "offscreen";
@@ -197,32 +166,31 @@ window.addEventListener('load', function () {
         document.querySelector(`#section0${counter}`).className = 'onscreen';
     }
 
-    // Helper function to get correct transition function 
-    // based on slider class.
+    // Helper function to get correct transition function based on slider class.
     function getStateByClass (slider) {
         let visibleState   , hiddenState  ;
         
         if (slider.classList.contains('up')) {
-            visibleState    = 'img-visible-up';
-            hiddenState   = 'img-hidden-up';
+            visibleState = 'img-visible-up';
+            hiddenState = 'img-hidden-up';
         } else if (slider.classList.contains('down')) {
-            visibleState    = 'img-visible-down';
-            hiddenState   = 'img-hidden-down';
+            visibleState = 'img-visible-down';
+            hiddenState = 'img-hidden-down';
         } else if (slider.classList.contains('left')) {
-            visibleState    = 'img-visible-left';
-            hiddenState   = 'img-hidden-left';
+            visibleState = 'img-visible-left';
+            hiddenState = 'img-hidden-left';
         } else {
-            visibleState    = 'img-visible-right';
-            hiddenState   = 'img-hidden-right';
+            visibleState = 'img-visible-right';
+            hiddenState = 'img-hidden-right';
         }
 
-        return { visibleState   , hiddenState   };
+        return { visibleState , hiddenState   };
     }
 
     // duplicate the polaroids for seamless infinite loop
     let copy = this.document.querySelector('#polarslide1').cloneNode(true);
     this.document.querySelector("#polaroids1").appendChild(copy);
-
+    // do the same thing for the second set of polaroids
     copy = this.document.querySelector('#polarslide2').cloneNode(true);
     this.document.querySelector("#polaroids2").appendChild(copy);
 
