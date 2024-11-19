@@ -1,7 +1,7 @@
 window.addEventListener('load', function () {
     'use strict';
     // Add JS here
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll('.section');
     const header = document.querySelector('header');
     const resetTime = [0,300,250,200,150,100,50];
     let sectionTops = [];
@@ -117,54 +117,47 @@ window.addEventListener('load', function () {
             let images = slider.querySelectorAll('.img');
             //console.log(images);
             /* let slider = document.querySelector('.slider'); */
-            let current = 0;
+            let current = 1;
 
-            let { visibleId, hiddenId } = getIdByClass(slider);
+            let { visibleState, hiddenState } = getStateByClass (slider);
 
-            /* if (images[0].id == visibleId && images[1].id == hiddenId){
+            /* if (images[0].id == visibleState    && images[1].id == hiddenState  ){
 
             }
  */
             images.forEach((img, idx) =>{
                 img.style.backgroundImage = `url(./images/section${counter}/slider${idxSlider+1}/${idx+1}.jpg)`;
                 if (idx == 0){
-                    images[idx].id = visibleId;
+                    if (img.classList.contains(hiddenState) && !img.classList.contains(visibleState)){
+                        img.classList.replace(hiddenState, visibleState);
+                    }
+                    /* img.classList.add = visibleState; */
                 } else {
-                    /* if (images[1].id == visibleId){
-                        images[1].id = visibleId;
-                    }else{ */
-                        images[idx].id = hiddenId;
+                    if (img.classList.contains(visibleState) && !img.classList.contains(hiddenState)){
+                        img.classList.replace(visibleState,hiddenState);
+                    }
+                    /* img.classList.replace(visible, visibleState) */
                 }
             })
 
-            /* if (images[1].id != visibleId){
+            /* if (images[1].id != visibleState   ){
                 setTimeout(function(){
-                    images[1].id = visibleId;
+                    images[1].id = visibleState   ;
                     current++;
                 }, 1000);
             }
             */
 
             
-            if (current < images.length){
-                images[current].id = visibleId;
-                current++;
-            } else {
-                for (let i = images.length-1; i > 0; i--){
-                    setTimeout(function(){
-                        images[i].id = hiddenId;
-                    }, resetTime[i]);    
-                }
-                current = 0;
-            }
+    
             const myInterval = setInterval(function(){
                 if (current < images.length){
-                    images[current].id = visibleId;
+                    images[current].classList.replace(hiddenState, visibleState);
                     current++;
                 } else {
                     for (let i = images.length-1; i > 0; i--){
                         setTimeout(function(){
-                            images[i].id = hiddenId;
+                            images[i].classList.replace(visibleState,hiddenState)  ;
                         }, resetTime[i]);    
                     }
                     current = 0;
@@ -206,24 +199,24 @@ window.addEventListener('load', function () {
 
     // Helper function to get correct transition function 
     // based on slider class.
-    function getIdByClass(slider) {
-        let visibleId, hiddenId;
+    function getStateByClass (slider) {
+        let visibleState   , hiddenState  ;
         
         if (slider.classList.contains('up')) {
-            visibleId = 'img-visible-up';
-            hiddenId = 'img-hidden-up';
+            visibleState    = 'img-visible-up';
+            hiddenState   = 'img-hidden-up';
         } else if (slider.classList.contains('down')) {
-            visibleId = 'img-visible-down';
-            hiddenId = 'img-hidden-down';
+            visibleState    = 'img-visible-down';
+            hiddenState   = 'img-hidden-down';
         } else if (slider.classList.contains('left')) {
-            visibleId = 'img-visible-left';
-            hiddenId = 'img-hidden-left';
+            visibleState    = 'img-visible-left';
+            hiddenState   = 'img-hidden-left';
         } else {
-            visibleId = 'img-visible-right';
-            hiddenId = 'img-hidden-right';
+            visibleState    = 'img-visible-right';
+            hiddenState   = 'img-hidden-right';
         }
 
-        return { visibleId, hiddenId };
+        return { visibleState   , hiddenState   };
     }
 
     // duplicate the polaroids for seamless infinite loop

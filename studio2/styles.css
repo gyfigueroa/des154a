@@ -53,7 +53,7 @@ p, h1, h2 {
     
 }
 
-section {
+.section {
     box-sizing: border-box;
     height: calc(100svh - 50px);
     display: grid;
@@ -87,7 +87,7 @@ h2 {
     font-weight: 600;
     line-height: 80%;
     letter-spacing: -2px;
-    
+    text-align: center;
 }
 
 p {
@@ -356,45 +356,45 @@ footer div {
     background-image: url(./images/loading.jpg);
 }
 
-#img-visible-left {
+.img-visible-left {
     z-index: 1;
     transform: translateX(0px);
 }
 
-#img-hidden-left {
+.img-hidden-left {
     z-index: 2;
     transform: translateX(101%);
     
 }
 
-#img-visible-up {
+.img-visible-up {
     z-index: 1;
     transform: translateY(0px);
 }
 
-#img-hidden-up {
+.img-hidden-up {
     z-index: 2;
     transform: translateY(101%);
     
 }
 
-#img-visible-down {
+.img-visible-down {
     z-index: 1;
     transform: translateY(0px);
 }
 
-#img-hidden-down {
+.img-hidden-down {
     z-index: 2;
     transform: translateY(-101%);
     
 }
 
-#img-visible-right {
+.img-visible-right {
     z-index: 1;
     transform: translateY(0px);
 }
 
-#img-hidden-right {
+.img-hidden-right {
     z-index: 2;
     transform: translateX(-101%);
     
