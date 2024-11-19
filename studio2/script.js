@@ -102,7 +102,13 @@ window.addEventListener('load', function () {
             document.querySelector('.container-active').className = 'container';
         }
 
-        header.style.opacity = 100;
+        if (counter === 1){
+            header.style.opacity = 0;
+        } else {
+            header.style.opacity = 100;
+        }
+
+        
 
         // whenver a section is change, trigger that section's sliders
         let sliders = section.querySelectorAll('.slider');
