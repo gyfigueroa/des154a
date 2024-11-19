@@ -2,7 +2,7 @@ window.addEventListener('load', function () {
     'use strict';
     // Add JS here
     const sections = document.querySelectorAll('section');
-    const headerP = document.querySelector('header p');
+    const header = document.querySelector('header');
     const resetTime = [0,300,250,200,150,100,50];
     let sectionTops = [];
     let pagetop;
@@ -43,19 +43,19 @@ window.addEventListener('load', function () {
     console.log(sectionTops);
 
     window.addEventListener('scroll', function(){
-        console.log(window.scrollY);
-        pagetop = window.scrollY + document.querySelector(`#section0${counter}`).offsetHeight ;
+        // console.log(window.scrollY);
+        pagetop = window.scrollY + document.documentElement.clientHeight;
         //console.log(pagetop);
         if (pagetop > sectionTops[counter]){
             counter++;
-            //console.log(`scrolling down ${counter}`);
+            console.log(`scrolling down ${counter}`);
         } else if (counter > 1 && pagetop < sectionTops[counter - 1]){
             counter--;
-            //console.log(`scrolling up ${counter}`);
+            console.log(`scrolling up ${counter}`);
         }
 
         if (this.window.scrollY == 0){
-            counter = 0;
+            counter = 1;
         }
 
         if (counter != prevCounter){
@@ -90,6 +90,8 @@ window.addEventListener('load', function () {
     }
 
     function onSectionChange(){
+        console.log(`currently in section ${counter}`);
+
         const style = `bgcolor${counter}`;
         document.querySelector('body').className = style;
 
@@ -100,17 +102,23 @@ window.addEventListener('load', function () {
             document.querySelector('.container-active').className = 'container';
         }
 
+        header.style.opacity = 100;
+
         // whenver a section is change, trigger that section's sliders
         let sliders = section.querySelectorAll('.slider');
 
         sliders.forEach((slider,idxSlider) => {
             let images = slider.querySelectorAll('.img');
-            console.log(images);
+            //console.log(images);
             /* let slider = document.querySelector('.slider'); */
             let current = 0;
 
             let { visibleId, hiddenId } = getIdByClass(slider);
 
+            /* if (images[0].id == visibleId && images[1].id == hiddenId){
+
+            }
+ */
             images.forEach((img, idx) =>{
                 img.style.backgroundImage = `url(./images/section${counter}/slider${idxSlider+1}/${idx+1}.jpg)`;
                 if (idx == 0){
@@ -120,8 +128,6 @@ window.addEventListener('load', function () {
                         images[1].id = visibleId;
                     }else{ */
                         images[idx].id = hiddenId;
-                    
-                    
                 }
             })
 
@@ -131,10 +137,20 @@ window.addEventListener('load', function () {
                     current++;
                 }, 1000);
             }
-             */
+            */
 
             
-
+            if (current < images.length){
+                images[current].id = visibleId;
+                current++;
+            } else {
+                for (let i = images.length-1; i > 0; i--){
+                    setTimeout(function(){
+                        images[i].id = hiddenId;
+                    }, resetTime[i]);    
+                }
+                current = 0;
+            }
             const myInterval = setInterval(function(){
                 if (current < images.length){
                     images[current].id = visibleId;
@@ -152,23 +168,29 @@ window.addEventListener('load', function () {
             
         })
 
+        if (counter === 3){
+            document.querySelector('.container').className = 'container-active';
+        }
 
-
+        if (counter === 1){
+            header.style.opacity = 0;
+        }
+/* 
 
         // change header in each section and make section specific changes
         switch(counter){
-            case 1: headerP.innerHTML = "The first section is on the page"; break;
-            case 2: headerP.innerHTML = "The second section is on the page"; break;
+            case 1: headerP.innerHTML = `1`; break;
+            case 2: headerP.innerHTML = `${counter}`; break;
             case 3: 
-                headerP.innerHTML = "The third section is on the page"; 
+                headerP.innerHTML = `${counter}`; 
                 document.querySelector('.container').className = 'container-active';
                 break;
-            case 4: headerP.innerHTML = "The fourth section is on the page"; break;
-            case 5: headerP.innerHTML = "The fifth section is on the page"; break;
-            case 6: headerP.innerHTML = "The sixth section is on the page"; break;
+            case 4: headerP.innerHTML = `${counter}`; break;
+            case 5: headerP.innerHTML = `${counter}`; break;
+            case 6: headerP.innerHTML = `${counter}`; break;
             //case 7: headerP.innerHTML = "The seventh section is on the page"; break;
             default: headerP.innerHTML = "Oooops something went wrong!"; break;
-        }
+        } */
 
         for (const eachPost of sections){
             eachPost.className = "offscreen";
