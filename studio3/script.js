@@ -8,6 +8,9 @@
     const score = document.querySelector('#score');
     const actionArea = document.querySelector('#actions');
     const scoreboard = document.querySelector("#scoreboard");
+    const startSound = document.getElementById('start');
+    const rollSound = document.getElementById('roll');
+    const winSound = document.getElementById('win');
 
     const gameData = {
         dice: ['images/1die.svg', 'images/2die.svg', 'images/3die.svg', 'images/4die.svg', 'images/5die.svg', 'images/6die.svg'],
@@ -42,10 +45,13 @@
     gameData.rollSum
 
     startGame.addEventListener('click', function(){
-        //randomly set game index here...
+        // play sound
+        startSound.play();
+        // make rest of game visible
         scoreboard.style.display = 'flex';
         game.style.display = 'flex';
         actionArea.style.display = 'flex';
+        //randomly set game index here...
         gameData.index = Math.round(Math.random());
         console.log(gameData.index);
         gameControl.innerHTML = '';
@@ -67,6 +73,7 @@
     }
 
     function throwDice(){
+
         actionArea.innerHTML = '';
         gameData.roll1 = Math.floor(Math.random() * 6) + 1;
         gameData.roll2 = Math.floor(Math.random() * 6) + 1;
@@ -81,12 +88,14 @@
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
             showCurrentScore();
             setTimeout(setUpTurn, 2000);
+            rollSound.play();
         }
         // if either die is a 1...
         else if (gameData.roll1 === 1 || gameData.roll2 === 1){
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
             game.innerHTML += `<p>Sorry, one of your rolls was a one, switching to ${gameData.players[gameData.index]}</p>`;
             setTimeout(setUpTurn,2000);
+            rollSound.play();
         }  
         // if neither die is a 1...
         else {
@@ -108,6 +117,7 @@
 
     function checkWinningCondition(){
         if (gameData.score[gameData.index] > gameData.gameEnd){
+            winSound.play();
             showCurrentScore();
 
         
@@ -120,6 +130,7 @@
             
         } else {
             showCurrentScore();
+            rollSound.play();
             
         }
     }
