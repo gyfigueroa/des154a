@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Libre Franklin", sans-serif;
+}
+
+img {
+    max-width: 300px;
+}
+
+
+main {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+#grid {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
