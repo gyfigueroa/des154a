@@ -182,8 +182,18 @@ nav ul li a {
   text-decoration: none;
   font-size: 20px;
   font-weight: 600;
-  opacity: 80%;
+  opacity: 70%;
   line-height: 80%;
+  transition: all 0.5s;
+}
+
+.link_active:hover {
+  opacity: 100%;
+  font-weight: 700;
+}
+
+.link_inactive {
+  opacity: 30%;
 }
 
 footer {

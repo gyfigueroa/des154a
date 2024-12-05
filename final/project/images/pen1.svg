@@ -1,0 +1,30 @@
+<svg width="51" height="464" viewBox="0 0 51 464" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M36 453H26L30.0896 461.997C30.4449 462.779 31.5551 462.779 31.9104 461.997L36 453Z" fill="#595959"/>
+<path opacity="0.7" fill-rule="evenodd" clip-rule="evenodd" d="M3 18C1.34315 18 0 19.3431 0 21V150C0 151.657 1.34315 153 3 153H4C5.65685 153 7 151.657 7 150V56H10V402L23.6667 446H37.3333L51 402V21C51 19.3431 49.6569 18 48 18H10H4H3Z" fill="#D9D9D9"/>
+<rect x="26" y="384" width="10" height="69" fill="#595959"/>
+<rect x="19" y="210" width="24" height="184" fill="#322848"/>
+<rect opacity="0.7" x="19" y="40" width="24" height="170" fill="#F1F1F1"/>
+<rect opacity="0.7" x="19" y="56" width="24" height="82" fill="#B2B2B2"/>
+<path d="M19 3C19 1.34315 20.3431 0 22 0H40C41.6569 0 43 1.34315 43 3V62H19V3Z" fill="#322848"/>
+<g filter="url(#filter0_b_180_4604)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3 18C1.34315 18 0 19.3431 0 21V150C0 151.657 1.34315 153 3 153H4C5.65685 153 7 151.657 7 150V56H10V402L23.6667 446H37.3333L51 402V21C51 19.3431 49.6569 18 48 18H10H4H3Z" fill="#D9D9D9" fill-opacity="0.3"/>
+</g>
+<g filter="url(#filter1_b_180_4604)">
+<rect x="10" y="346" width="41" height="56" fill="#D9D9D9" fill-opacity="0.7"/>
+</g>
+<path d="M36 84C36 82.3431 37.3431 81 39 81H51V266H39C37.3431 266 36 264.657 36 263V84Z" fill="#FFF0D5"/>
+<defs>
+<filter id="filter0_b_180_4604" x="-4" y="14" width="59" height="436" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="2"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_180_4604"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_180_4604" result="shape"/>
+</filter>
+<filter id="filter1_b_180_4604" x="0" y="336" width="61" height="76" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="5"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_180_4604"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_180_4604" result="shape"/>
+</filter>
+</defs>
+</svg>

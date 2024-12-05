@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio 1: Mad Libs</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Lacquer&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Pangolin&display=swap" rel="stylesheet">    
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div id="timeroverlay" class="hidden">
+        <article>
+            <h2>This assignment is overdue!</h2>
+            <button class="btn-restart" id="visible">GO BACK IN TIME 🪄</button>
+        </article>
+    </div>
+
+
+    <section id="overlay" class="hidden">
+        <div class="menu">
+            <p id="madlib"></p>
+            <table>
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2">
+                        <h2>Your Assignment</h2>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2">
+                        <button class="close">close</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+
+    </section>
+
+
+    <main>
+        <div class="container">
+            <h3>Time till deadline: <span class="time">60s</span></h3>
+
+            <div class="progress">
+                <div class="progress-inner"></div>
+            </div>
+
+            <!-- <button class="btn-restart" id="hidden">GO BACK IN TIME 🪄</button> -->
+        </div>
+
+        <div class="menu">
+            <form id="myform">
+                <table>
+                    
+                        <tr>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td class="col1"></td>
+                            <td class="col2">
+                                <h2>Your Assignment</h2>
+                            </td>
+                        </tr>
+        
+                        <tr>
+                            <td class="col1"></td>
+                            <td class="col2">
+                                <label for="dayofweek">Enter a day of the week:</label>
+                                <input type="text" id="dayofweek">
+                            </td>
+                        </tr>
+        
+                        <tr>
+                            <td class="col1"></td>
+                            <td class="col2">
+                                <label for="verb">Enter a verb:</label>
+                                <input type="text" id="verb">
+                            </td>
+                        </tr>
+        
+                        <tr>
+                            <td class="col1"></td>
+                            <td class="col2">
+                                <label for="verbing">Enter a verb ending in -ing:</label>
+                                <input type="text" id="verbing">
+                            </td>
+                        </tr>
+        
+                        <tr>
+                            <td class="col1"></td>
+                            <td class="col2">
+                                <label for="media">Enter a TV show or movie:</label>
+                                <input type="text" id="media">
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="col1"></td>
+                            <td class="col2">
+                                <label for="number">Enter a # greater than 1:</label>
+                                <input type="text" id="number">
+                            </td>
+                        </tr>
+        
+                        <tr>
+                            <td class="col1"></td>
+                            <td class="col2">
+                                <label for="noun">Enter a plural noun:</label>
+                                <input type="text" id="noun">
+                            </td>
+                        </tr>
+        
+                        <tr>
+                            <td class="col1"></td>
+                            <td class="col2">
+                                <label for="app">Enter an app name:</label>
+                                <input type="text" id="app">
+                            </td>
+                        </tr>
+        
+                        <tr>
+                            <td class="col1"></td>
+                            <td class="col2">
+                                <label for="emotion">Enter an emotion:</label>
+                                <input type="text" id="emotion">
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="col1"></td>
+                            <td class="col2">
+                                <label for="verb2">Enter a verb:</label>
+                                <input type="text" id="verb2">
+                            </td>
+                        </tr>
+        
+                        <tr>
+                            <td class="col1"></td>
+                            <td class="col2">
+                                <input type="submit" name="send" value="turn it in!" id="submit">
+                            </td>
+                        </tr>
+        
+                        <tr>
+                            <td class="col1"></td>
+                            <td class="col2">
+                                <p id="error"></p>
+                            </td>
+                        </tr>
+                    
+                </table>
+            </form>
+
+            <table class="extrasheets" id="sheet1">
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+                
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+            
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+            </table>
+
+            <table class="extrasheets" id="sheet2">
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+                
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+            
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+
+                <tr>
+                    <td class="col1"></td>
+                    <td class="col2"></td>
+                </tr>
+            </table>
+            
+            <img class="sticker" id="pencil" src="images/pencil.svg" alt="pencil graphic">
+            <img class="sticker" id="highlighter" src="images/highlighter1.svg" alt="highlighter graphic">
+            <img class="sticker" id="eraser" src="images/eraser.svg" alt="eraser graphic">
+            <img class="sticker" id="pencil2" src="images/pencil.svg" alt="pencil graphic 2">
+            <img class="sticker" id="highlighter2" src="images/highlighter1.svg" alt="pencil graphic 2">
+        </div>
+
+        <div class="credit">
+            <p>DESIGNED BY</p>
+            <h2>Gabriel Figueroa</h2>
+        </div>
+    </main> 
+</body>
+</html>

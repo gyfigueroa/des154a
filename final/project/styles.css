@@ -1,0 +1,419 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgb(88, 73, 43);
+}
+
+html {
+    overflow-x: hidden;
+}
+
+
+body {
+    background-image: url("images/grid.svg");
+    background-size: 50px 50px;
+    height: 100vh;
+    transition: all 1s ease;
+}
+
+.container {
+    width: 90%;
+    padding: 20px;
+    background: #f4f4f2;
+    height: fit-content;
+    color: rgb(86, 80, 68);
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 30px;
+    transition: height 1s ease;
+    position: relative;
+    margin: auto;
+    box-shadow: 0px 10px 30px -7px rgba(0, 0, 0, 0.4);
+/*     margin-top: 50px;
+ */}
+
+h3 {
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 500;
+    font-size: 15pt;
+}
+
+span {
+    font-weight: 600;
+}
+
+.progress {
+    width: 100%;
+    height: 15px;
+    background: #bebcb26c;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+.progress-inner {
+    position: absolute;
+    background: green;
+    width: 100%;
+    height: 100%;
+    transition: width 1s linear, background-color 10s ease;
+}
+
+button.btn-restart {
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 14pt;
+    color: white;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+/*     position: absolute;
+    bottom: 0;
+    left: 50%; 
+    transform: translate(-50%, -50%);*/
+    background: linear-gradient(-45deg, #4f0050, #ff2579, #26ccff, #004a4f);
+	background-size: 500% 500%;
+	animation: gradient 5s ease-in-out infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+table h2 {
+    font-family: "Homemade Apple", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25pt;
+    padding: 0px 10px;
+    margin-bottom: 0px;
+    margin-top: 22px;
+}
+
+table {
+    font-family: "Pangolin", cursive;
+    background-color: #fffa9b;
+    border-collapse: collapse;
+    /* max-width: max-content; */
+    border-radius:5px;
+    overflow: hidden;
+    box-shadow: 0px 10px 30px -7px rgba(0, 0, 0, 0.4);
+    transition: all 0.5s ease;
+}
+.menu {
+    position: relative;
+    margin: auto;
+}
+
+.sticker {
+    position: absolute;
+    filter: drop-shadow(0px 6px 3px rgba(0, 0, 0, 0.2));
+    transition: all 0.5s ease;
+}
+
+.extrasheets {
+    position: absolute;
+    width: 400px;
+    height: 480px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 1s ease;
+}
+
+#sheet1 {
+    opacity: 0;
+}
+
+#sheet2 {
+    opacity: 0;
+}
+
+
+
+td {
+    border-bottom: rgba(0, 74, 79, 0.5) 2px solid;
+    padding: 8px 10px;
+}
+
+
+th {
+    background-color: rgb(119, 39, 10);
+    height: 40px;
+}
+
+.col1 {
+    width: 30px;
+    border-right: rgba(255, 37, 121, 0.5) 2px solid;
+}
+
+.col2 {
+    border-left: rgba(255, 37, 121, 0.5) 2px solid;
+}
+
+input {
+    background-color: rgba(255, 255, 255, 0.4);
+    border: none;
+    border-bottom: 1.5px solid rgb(48, 35, 24);
+}
+
+#submit {
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #4fff23aa;
+    border: none;
+}
+
+
+.hidden {
+    opacity: 0;
+    z-index: -1;
+}
+
+.showing {
+    opacity: 1;
+    z-index: 1;
+}
+
+#timeroverlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: opacity 1s ease;
+}
+
+#timeroverlay h2 {
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 20pt;
+    font-weight: 600;
+    text-align: center;
+    margin: 10px 0px 0px 0px;
+    color: white;
+}
+
+#timeroverlay article {
+    z-index: 1;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    background: linear-gradient(126deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 100%);
+    border: rgba(255, 255, 255, 0.4) 1px solid;
+    box-shadow: inset 10px 10px 62px -17px rgba(255,255,255,1), 0px 10px 30px -7px rgba(255, 255, 255, 0.4);;
+    padding: 20px;
+    border-radius: 30px;
+    width: 325px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* overflow-y: scroll; */
+}
+
+
+#pencil {
+    bottom: -68px;
+    left: 395px;
+    transform: rotate( -146deg);
+}
+
+#pencil2 {
+    opacity: 0;
+    bottom: -68px;
+    left: 395px;
+    transform: rotate( -146deg);
+}
+
+#highlighter2 {
+    opacity: 0;
+    bottom: -287px;
+    left: -83px;
+    transform: rotate( 79deg);
+}
+
+#highlighter {
+    bottom: -287px;
+    left: -83px;
+    transform: rotate( 79deg);
+}
+
+
+#eraser {
+    bottom: -171px;
+    right: -11px;
+    transform: rotate( -211deg);
+}
+
+#overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: opacity 1s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#overlay table {
+    position: relative;
+    margin: auto;
+    transform: rotate( -3deg);
+}
+
+
+#madlib {
+    font-family: "Pangolin", cursive;
+    position: absolute;
+    left: 37px;
+    top: 86px;
+    z-index: 1;
+    transform: rotate( -3deg);
+    max-width: 320px;
+    font-size: 14pt;
+}
+
+button.close {
+    /* outline: none; */
+    border: none;
+    padding: 5px 5px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    background: #fe00ff75;
+}
+
+
+.credit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 60px;
+    transition: all 0.5s ease;
+}
+
+.credit p {
+    font-family: "Libre Franklin", sans-serif;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.credit h2 {
+    font-family: "Homemade Apple", cursive;
+    color: white;
+}
+
+@media screen and (min-width: 600px){
+    #sheet1 {
+        opacity: 1;
+        top: 78px;
+        transform: rotate( 15deg);
+        left: 46px;
+    }
+    
+    #sheet2 {
+        opacity: 1;
+        transform: rotate( -9deg);
+        top: 56px;
+        left: -50px;
+    }
+
+    .container {
+        max-width: 700px;
+    }
+
+    #pencil {
+        bottom: 66px;
+        left: 480px;
+        transform: rotate( -130deg);
+    }
+
+    #pencil2 {
+        opacity: 1;
+        bottom: 50px;
+        left: -69px;
+        transform: rotate( 17deg);
+    }
+
+    #highlighter {
+        bottom: -278px;
+        left: -151px;
+        transform: rotate( 79deg);
+    }
+
+
+    #highlighter2 {
+        opacity: 1;
+        bottom: -102px;
+        left: 409px;
+        transform: rotate( -113deg);
+    }
+
+    #eraser {
+        bottom: -113px;
+        right: 0px;
+        transform: rotate( -243deg);
+    }
+
+    header {
+        margin-top: 25px;
+        /* margin-bottom: 25px; */
+    }
+
+    .credit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    button.btn-restart:hover {
+        /* transform: scale(1.1); */
+        /* height: 62px; */
+        font-size: 17pt;
+        margin-top: 15px;
+        box-shadow: 0 0 40px 5px #48abe0, 0 0 20px 1px #ebecca, 0 0 75px 18px #8a2be2, 0 0 80px 25px #ff1493;
+    }
+
+
+}
+
+
+
