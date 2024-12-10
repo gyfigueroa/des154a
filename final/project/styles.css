@@ -12,6 +12,7 @@ html {
 
 body {
     background-image: url("images/grid.svg");
+    background-color: #59544E;
     background-size: 50px 50px;
     height: 100vh;
     transition: all 1s ease;
@@ -105,8 +106,10 @@ main{
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 20px;
+    padding-top: 20px;
     gap: 20px;
+    height: 100vh;
+    padding-bottom: 500px;
 }
 
 table h2 {
@@ -137,7 +140,11 @@ table {
 .sticker {
     position: absolute;
     filter: drop-shadow(0px 6px 3px rgba(0, 0, 0, 0.2));
-    transition: all 0.5s ease;
+    transition: all 1s ease;
+    top: 1000px;
+    left: 0;
+    opacity: 0%;
+    transform: translate(50%, 50%);
 }
 
 .extrasheets {
@@ -183,6 +190,12 @@ th {
 
 .col2 {
     border-left: rgba(255, 37, 121, 0.5) 2px solid;
+}
+
+.centerCol {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
 }
 
 input {
@@ -253,36 +266,37 @@ input {
 
 
 #pencil {
-    bottom: -68px;
-    left: 395px;
-    transform: rotate( -146deg);
+    opacity: 1;
+    top: 464px;
+    left: -24px;
+    transform: rotate(38deg);
 }
 
-#pencil2 {
-    opacity: 0;
-    bottom: -68px;
-    left: 395px;
-    transform: rotate( -146deg);
+
+
+#pen {
+    opacity: 1;
+    max-width: 51px;
+    top: 210px;
+    left: -130px;
+    transform: rotate(-75deg);
 }
 
-#highlighter2 {
-    opacity: 0;
-    bottom: -287px;
-    left: -83px;
-    transform: rotate( 79deg);
-}
+
 
 #highlighter {
-    bottom: -287px;
-    left: -83px;
-    transform: rotate( 79deg);
+    opacity: 1;
+    top: 123px;
+    left: 367px;
+    transform: rotate(209deg);
 }
 
 
 #eraser {
-    bottom: -171px;
-    right: -11px;
-    transform: rotate( -211deg);
+    opacity: 1;
+    top: 559px;
+    left: 339px;
+    transform: rotate(-211deg);
 }
 
 #overlay {
@@ -369,40 +383,139 @@ button.close {
     }
 
     .container {
-        max-width: 700px;
+        min-width: 540px;
+        width: 80%;
+        max-width: 900px;
+        z-index: 2;
     }
 
-    #pencil {
-        bottom: 66px;
-        left: 480px;
-        transform: rotate( -130deg);
+    #pen2 {
+        opacity: 1;
+        top: -100px;
+        left: -139px;
+        transform: rotate(-23deg);
+    }
+
+    #highlighter2 {
+        opacity: 1;
+        top: 448px;
+        left: -181px;
+        transform: rotate(51deg);
+    }
+
+    #highlighter3 {
+        opacity: 1;
+        top: 452px;
+        left: 611px;
+        transform: rotate(-69deg);
+    }
+
+    #highlighter4 {
+        opacity: 1;
+        top: -348px;
+        left: 581px;
+        transform: rotate(239deg);
+    }
+
+    #paperclip {
+        opacity: 1;
+        top: 497px;
+        left: 200px;
+        transform: rotate(244deg);
+    }
+
+    #paperclip2 {
+        opacity: 1;
+        top: 447px;
+        left: -140px;
+        transform: rotate(-434deg);
+    }
+
+    #paperclip3 {
+        opacity: 1;
+        top: 317px;
+        left: 670px;
+        transform: rotate(510deg);
+    }
+
+    #page {
+        opacity: 1;
+        top: -63px;
+        left: 690px;
+        z-index: -1;
+        transform: rotate(-24deg);
+    }
+
+    #page2 {
+        opacity: 1;
+        top: 337px;
+        left: -710px;
+        z-index: -1;
+        transform: rotate(124deg);
+    }
+
+    #binderclip {
+        opacity: 1;
+        top: 337px;
+        left: 450px;
+        transform: rotate(244deg); 
+    }
+
+    #binderclip2 {
+        opacity: 1;
+        top: 557px;
+        left: -400px;
+        transform: rotate(-114deg);
+    }
+
+    #pin {
+        opacity: 1;
+        top: 307px;
+        left: -111px;
+        transform: rotate(-46deg);
+    }
+
+    #pin2 {
+        opacity: 1;
+        top: -3px;
+        left: 439px;
+        transform: rotate(56deg);
     }
 
     #pencil2 {
         opacity: 1;
-        bottom: 50px;
-        left: -69px;
-        transform: rotate( 17deg);
+        top: -19px;
+        left: 570px;
+        transform: rotate(-10deg);
     }
 
-    #highlighter {
-        bottom: -278px;
-        left: -151px;
-        transform: rotate( 79deg);
-    }
-
-
-    #highlighter2 {
+    #pencil3 {
         opacity: 1;
-        bottom: -102px;
-        left: 409px;
-        transform: rotate( -113deg);
+        top: 541px;
+        left: 270px;
+        transform: rotate(110deg);
     }
 
-    #eraser {
-        bottom: -113px;
-        right: 0px;
-        transform: rotate( -243deg);
+    #pen3 {
+        opacity: 1;
+        top: 239px;
+        left: 630px;
+        transform: rotate(-100deg);
+    }
+
+    #pen4 {
+        opacity: 1;
+        top: 29px;
+        left: -440px;
+        z-index: 1;
+        transform: rotate(-100deg);
+    }
+
+    #sticky{
+        opacity: 1;
+        top: 139px;
+        left: -340px;
+        transform: rotate(10deg);
     }
 
     header {
