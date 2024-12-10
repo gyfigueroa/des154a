@@ -12,7 +12,7 @@
     const btnSubmit = document.querySelector("#submit");
     let submitted = false;
 
-    const time = 3000;//seconds
+    const time = 30;//seconds
     const start = "#598392";
     const end = "#D00000";
 

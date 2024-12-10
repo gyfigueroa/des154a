@@ -220,7 +220,7 @@ input {
 
 .showing {
     opacity: 1;
-    z-index: 1;
+    z-index: 3;
 }
 
 #timeroverlay {
@@ -267,7 +267,7 @@ input {
 
 #pencil {
     opacity: 1;
-    top: 464px;
+    top: 474px;
     left: -24px;
     transform: rotate(38deg);
 }
@@ -389,13 +389,6 @@ button.close {
         z-index: 2;
     }
 
-    #pen2 {
-        opacity: 1;
-        top: -100px;
-        left: -139px;
-        transform: rotate(-23deg);
-    }
-
     #highlighter2 {
         opacity: 1;
         top: 448px;
@@ -415,6 +408,13 @@ button.close {
         top: -348px;
         left: 581px;
         transform: rotate(239deg);
+    }
+
+    #highlighter5 {
+        opacity: 1;
+        top: -198px;
+        left: -499px;
+        transform: rotate(-307deg);
     }
 
     #paperclip {
@@ -438,6 +438,13 @@ button.close {
         transform: rotate(510deg);
     }
 
+    #paperclip4 {
+        opacity: 1;
+        top: -53px;
+        left: -80px;
+        transform: rotate(300deg);
+    }
+
     #page {
         opacity: 1;
         top: -63px;
@@ -452,6 +459,14 @@ button.close {
         left: -710px;
         z-index: -1;
         transform: rotate(124deg);
+    }
+
+    #page3 {
+        opacity: 1;
+        top: 437px;
+        left: 690px;
+        z-index: -1;
+        transform: rotate(24deg);
     }
 
     #binderclip {
@@ -482,6 +497,13 @@ button.close {
         transform: rotate(56deg);
     }
 
+    #pin3 {
+        opacity: 1;
+        top: 37px;
+        left: -281px;
+        transform: rotate(-128deg);
+    }
+
     #pencil2 {
         opacity: 1;
         top: -19px;
@@ -494,6 +516,14 @@ button.close {
         top: 541px;
         left: 270px;
         transform: rotate(110deg);
+    }
+
+    #pen2 {
+        max-width: 51px;
+        opacity: 1;
+        top: -100px;
+        left: -139px;
+        transform: rotate(-23deg);
     }
 
     #pen3 {
@@ -511,11 +541,33 @@ button.close {
         transform: rotate(-100deg);
     }
 
+    #pen5 {
+        max-width: 51px;
+        opacity: 1;
+        top: -80px;
+        left: 821px;
+        transform: rotate(-127deg);
+    }
+
     #sticky{
         opacity: 1;
         top: 139px;
         left: -340px;
         transform: rotate(10deg);
+    }
+
+    #sticky2 {
+        opacity: 1;
+        top: 9px;
+        left: -440px;
+        transform: rotate(-10deg);
+    }
+
+    #eraser2 {
+        opacity: 1;
+        top: -60px;
+        left: 680px;
+        transform: rotate(30deg);
     }
 
     header {

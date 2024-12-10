@@ -1,0 +1,13 @@
+<svg width="198" height="206" viewBox="0 0 198 206" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="198" height="206" fill="#F08222"/>
+<g style="mix-blend-mode:overlay" opacity="0.2">
+<rect width="198" height="32" fill="black"/>
+</g>
+<g style="mix-blend-mode:overlay" opacity="0.3">
+<rect y="198" width="198" height="8" fill="black"/>
+</g>
+<path opacity="0.3" d="M151 198V151H198L151 198Z" fill="white"/>
+<g style="mix-blend-mode:overlay" opacity="0.3">
+<path d="M198 151L198 198L151 198L198 151Z" fill="black"/>
+</g>
+</svg>
