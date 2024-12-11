@@ -7,11 +7,10 @@
 }
 
 body {
-    background-image: url("/final/project/images/grid.svg");
+    background-image: url("project/images/grid.svg");
     background-color: #59544E;
     background-size: 50px 50px;
     transition: all 1s ease;
-
 }
 
 h1 {
