@@ -166,7 +166,7 @@ table {
 
 
 td {
-    border-bottom: rgba(0, 74, 79, 0.5) 2px solid;
+    border-bottom: rgba(0, 74, 79, 0.25) 2px solid;
     padding: 8px 10px;
 }
 
@@ -183,11 +183,11 @@ th {
 
 .col1 {
     width: 30px;
-    border-right: rgba(255, 37, 121, 0.5) 2px solid;
+    border-right: rgba(255, 37, 121, 0.25) 2px solid;
 }
 
 .col2 {
-    border-left: rgba(255, 37, 121, 0.5) 2px solid;
+    border-left: rgba(255, 37, 121, 0.25) 2px solid;
 }
 
 .centerCol {
