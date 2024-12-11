@@ -181,19 +181,20 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   font-size: 20px;
-  font-weight: 600;
-  opacity: 70%;
+  font-weight: 700;
+  opacity: 60%;
   line-height: 80%;
   transition: all 0.5s;
 }
 
 .link_active:hover {
   opacity: 100%;
-  font-weight: 700;
+  font-weight: 750;
 }
 
 .link_inactive {
   opacity: 30%;
+  font-weight: 600;
 }
 
 footer {
